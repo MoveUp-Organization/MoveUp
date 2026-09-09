@@ -1,23 +1,14 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Outlet } from "react-router";
+import Cabecalho from "./components/Cabecalho/Cabecalho";
+import Rodape from "./components/Rodape/Rodape";
 
-function App() {
+export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<div>Início</div>} />
-        <Route path="/login" element={<div>Login</div>} />
-        <Route path="/cadastro" element={<div>Cadastro</div>} />
-        <Route path="/home" element={<div>Home</div>} />
-        <Route path="/missoes" element={<div>Missões</div>} />
-        <Route path="/conversao" element={<div>Conversão</div>} />
-        <Route path="/voucher" element={<div>Voucher</div>} />
-        <Route path="/sobre" element={<div>Sobre</div>} />
-        <Route path="/faq" element={<div>FAQ</div>} />
-        <Route path="/contato" element={<div>Contato</div>} />
-        <Route path="/integrantes" element={<div>Integrantes</div>} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <Cabecalho />
+      <Outlet />
+      <Rodape />
+    </div>
+
   )
 }
-
-export default App
