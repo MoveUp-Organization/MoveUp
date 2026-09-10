@@ -16,6 +16,7 @@ import Missoes from './pages/Missoes/index.tsx'
 import Sobre from './pages/Sobre/index.tsx'
 import Voucher from './pages/Voucher/index.tsx'
 import Error from './pages/Error/index.tsx'
+import MissaoDetalhe from './pages/MissaoDetalhe/index.tsx'
 
 const router = createBrowserRouter([
   {
@@ -23,8 +24,8 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <Error />,
     children: [
-      { path: '/', element: <Home /> },
-      { path: '/inicio', element: <Inicio /> },
+      { path: '/', element: <Inicio /> },
+      { path: '/home', element: <Home /> },
       { path: '/cadastro', element: <Cadastro /> },
       { path: '/contato', element: <Contato /> },
       { path: '/conversao', element: <Conversao /> },
@@ -32,6 +33,7 @@ const router = createBrowserRouter([
       { path: '/integrantes', element: <Integrantes /> },
       { path: '/login', element: <Login /> },
       { path: '/missoes', element: <Missoes /> },
+      { path: '/missoes/:id', element: <MissaoDetalhe /> },
       { path: '/sobre', element: <Sobre /> },
       { path: '/voucher', element: <Voucher /> },
     ],
