@@ -46,7 +46,7 @@ export default function Home() {
   ];
 
   useEffect(() => {
-    document.title = 'Dashboard - MoveUp';
+    document.title = 'MoveUP - Mobilidade Sustentável';
   }, []);
 
   const concluirMissao = (id: number) => {
@@ -77,7 +77,7 @@ export default function Home() {
     <main className="max-w-[1200px] mx-auto px-4 sm:px-8 py-8">
       {/* Welcome */}
       <section className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-6 sm:p-8 text-white mb-8">
-        <h1 className="text-2xl sm:text-3xl font-bold mb-2">Olá, EcoViajante! 👋</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold mb-2">Olá, EcoViajante!</h1>
         <p className="text-white/80">
           Seu impacto positivo em mobilidade sustentável hoje está ajudando a construir o amanhã.
         </p>

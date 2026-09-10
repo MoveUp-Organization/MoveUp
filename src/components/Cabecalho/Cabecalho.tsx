@@ -65,7 +65,7 @@ export default function Cabecalho() {
           </li>
           <li>
             <NavLink to="/home" className={linkClasses} onClick={fecharMenu}>
-              Plataforma
+              Home
             </NavLink>
           </li>
           <li>
