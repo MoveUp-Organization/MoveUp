@@ -17,6 +17,9 @@ import Sobre from './pages/Sobre/index.tsx'
 import Voucher from './pages/Voucher/index.tsx'
 import Error from './pages/Error/index.tsx'
 import MissaoDetalhe from './pages/MissaoDetalhe/index.tsx'
+import TransferirPontos from './pages/TransferirPontos/index.tsx'
+import Historico from './pages/Historico/index.tsx'
+import MeuCartao from './pages/Cartao/index.tsx'
 
 const router = createBrowserRouter([
   {
@@ -42,6 +45,9 @@ const router = createBrowserRouter([
       { path: '/missoes/:id', element: <MissaoDetalhe /> },
       { path: '/sobre', element: <Sobre /> },
       { path: '/voucher', element: <Voucher /> },
+      { path: '/transferir-pontos', element: <TransferirPontos /> },
+      { path: '/historico', element: <Historico /> },
+      { path: '/meu-cartao', element: <MeuCartao /> },
     ],
   },
 ])
