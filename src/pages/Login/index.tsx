@@ -19,8 +19,10 @@ export default function Login() {
   } = useForm<LoginFormData>();
 
   const onSubmit = (data: LoginFormData) => {
-    console.log('Login realizado:', data);
-    alert(`Bem-vindo de volta! Login realizado com sucesso.`);
+    sessionStorage.setItem(
+      'moveup_user',
+      JSON.stringify({ nome: data.email.split('@')[0], email: data.email })
+    );
     navigate('/home');
   };
 

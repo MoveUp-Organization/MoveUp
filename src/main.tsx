@@ -20,18 +20,24 @@ import MissaoDetalhe from './pages/MissaoDetalhe/index.tsx'
 
 const router = createBrowserRouter([
   {
+    path: '/login',
+    element: <Login />,
+  },
+  {
+    path: '/cadastro',
+    element: <Cadastro />,
+  },
+  {
     path: '/',
     element: <App />,
     errorElement: <Error />,
     children: [
       { path: '/', element: <Inicio /> },
       { path: '/home', element: <Home /> },
-      { path: '/cadastro', element: <Cadastro /> },
       { path: '/contato', element: <Contato /> },
       { path: '/conversao', element: <Conversao /> },
       { path: '/faq', element: <FAQ /> },
       { path: '/integrantes', element: <Integrantes /> },
-      { path: '/login', element: <Login /> },
       { path: '/missoes', element: <Missoes /> },
       { path: '/missoes/:id', element: <MissaoDetalhe /> },
       { path: '/sobre', element: <Sobre /> },

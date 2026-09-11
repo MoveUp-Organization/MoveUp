@@ -5,7 +5,7 @@ export default function Inicio() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="min-h-[520px] py-20 px-5 flex justify-center items-center text-center bg-[radial-gradient(circle_at_bottom_left,rgba(0,140,255,0.35),transparent_35%),radial-gradient(circle_at_top_right,rgba(122,44,255,0.28),transparent_35%),linear-gradient(135deg,#f4f8ff,#d7e9ff,#cbb6ff)]">
+      <section className="min-h-[420px] py-14 px-5 flex justify-center items-center text-center bg-[radial-gradient(circle_at_bottom_left,rgba(0,140,255,0.35),transparent_35%),radial-gradient(circle_at_top_right,rgba(122,44,255,0.28),transparent_35%),linear-gradient(135deg,#f4f8ff,#d7e9ff,#cbb6ff)]">
         <div className="max-w-[850px]">
           <h1 className="text-4xl sm:text-5xl lg:text-[52px] font-extrabold leading-tight mb-6 text-dark">
             Mova-se de forma inteligente. Mude o futuro.

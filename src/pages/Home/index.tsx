@@ -74,7 +74,7 @@ export default function Home() {
   };
 
   return (
-    <main className="max-w-[1200px] mx-auto px-4 sm:px-8 py-8">
+    <main className="max-w-[1200px] mx-auto px-4 sm:px-8 py-6">
       {/* Welcome */}
       <section className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-6 sm:p-8 text-white mb-8">
         <h1 className="text-2xl sm:text-3xl font-bold mb-2">Olá, EcoViajante!</h1>

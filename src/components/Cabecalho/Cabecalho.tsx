@@ -20,12 +20,12 @@ export default function Cabecalho() {
 
   return (
     <header className="w-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.08)] sticky top-0 z-50">
-      <nav className="max-w-[1200px] mx-auto px-4 sm:px-8 py-4 flex items-center justify-between flex-wrap">
+      <nav className="max-w-[1200px] mx-auto px-4 sm:px-8 py-2 flex items-center justify-between flex-wrap">
         <Link to="/" onClick={fecharMenu}>
           <img
             src={logo}
             alt="Logo MoveUp"
-            className="w-36 sm:w-48 h-auto transition-transform duration-300 hover:scale-[1.03]"
+            className="w-28 sm:w-36 h-auto transition-transform duration-300 hover:scale-[1.03]"
           />
         </Link>
 
@@ -54,7 +54,7 @@ export default function Cabecalho() {
         <ul
           className={`md:flex md:gap-5 lg:gap-6 md:items-center list-none ${
             menuAberto
-              ? 'flex flex-col items-center gap-3 w-full mt-4 p-5 bg-white rounded-2xl shadow-lg'
+              ? 'flex flex-col items-center gap-2 w-full mt-3 p-4 bg-white rounded-2xl shadow-lg'
               : 'hidden'
           }`}
         >
@@ -106,10 +106,13 @@ export default function Cabecalho() {
           <li>
             <NavLink
               to="/login"
-              className="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-bold text-sm transition-transform duration-200 hover:-translate-y-0.5 shadow-md"
+              className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-primary to-secondary text-white transition-transform duration-200 hover:-translate-y-0.5 shadow-md"
               onClick={fecharMenu}
+              aria-label="Acessar login"
             >
-              Login
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v1.2c0 .7.5 1.2 1.2 1.2h16.8c.7 0 1.2-.5 1.2-1.2v-1.2c0-3.2-6.4-4.8-9.6-4.8z"/>
+              </svg>
             </NavLink>
           </li>
         </ul>
