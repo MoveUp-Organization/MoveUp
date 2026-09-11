@@ -22,8 +22,10 @@ export default function Cadastro() {
   const senhaAtual = watch('senha');
 
   const onSubmit = (data: CadastroFormData) => {
-    console.log('Cadastro realizado:', data);
-    alert('Conta criada com sucesso! Redirecionando para o login...');
+    sessionStorage.setItem(
+      'moveup_cadastro',
+      JSON.stringify({ nome: data.nome, email: data.email })
+    );
     navigate('/login');
   };
 
