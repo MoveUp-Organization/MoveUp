@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link }from 'react-router-dom';
 import Card from '../../components/Card/Card';
 
 interface DadosUsuario {
@@ -41,10 +42,6 @@ export default function Conversao() {
 
   const toggleSaldo = () => {
     setSaldoVisivel((prev) => !prev);
-  };
-
-  const handleAcaoRapida = (acao: string) => {
-    alert(`Funcionalidade "${acao}" será implementada em breve!`);
   };
 
   return (
@@ -95,15 +92,16 @@ export default function Conversao() {
             )}
           </div>
 
-          <button
-            onClick={() => handleAcaoRapida('Ver conta')}
+          <Link
+            to="/meu-cartao"
             className="flex items-center gap-2 text-sm font-semibold text-white/90 hover:text-white transition-colors cursor-pointer"
           >
             Ver conta
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-              <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd"/>
-            </svg>
-          </button>
+
+            <span className="text-lg leading-none">
+              →
+            </span>
+          </Link>
         </div>
 
         {/* Bloco Indicadores */}
@@ -152,32 +150,52 @@ export default function Conversao() {
 
       {/* Ações Rápidas */}
       <section className="mb-8">
-        <h2 className="text-lg font-bold text-dark mb-4">Ações rápidas</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <div onClick={() => handleAcaoRapida('Transferir pontos')} className="cursor-pointer">
-            <Card
-              icone="🔄"
-              titulo="Transferir pontos"
-              descricao="Envie GreenPoints para outros usuários da plataforma."
-            />
-          </div>
-          <div onClick={() => handleAcaoRapida('Meu cartão')} className="cursor-pointer">
-            <Card
-              icone="💳"
-              titulo="Meu cartão"
-              descricao="Gerencie seu cartão de transporte vinculado ao MoveUp."
-            />
-          </div>
-          <div onClick={() => handleAcaoRapida('Histórico de geração')} className="cursor-pointer">
-            <Card
-              icone="📊"
-              titulo="Histórico de geração"
-              descricao="Veja o histórico completo de GreenPoints gerados."
-            />
-          </div>
-        </div>
-      </section>
 
+      <h2 className="text-lg font-bold text-dark mb-4">
+        Ações rápidas
+      </h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
+        {/* Transferir pontos */}
+        <Link
+          to="/transferir-pontos"
+          className="block cursor-pointer hover:-translate-y-1 transition-transform"
+        >
+          <Card
+            icone="🔄"
+            titulo="Transferir pontos"
+            descricao="Envie GreenPoints para outros usuários da plataforma."
+          />
+        </Link>
+
+        {/* Meu cartão */}
+        <Link
+          to="/meu-cartao"
+          className="block cursor-pointer hover:-translate-y-1 transition-transform"
+        >
+          <Card
+            icone="💳"
+            titulo="Meu cartão"
+            descricao="Gerencie seu cartão de transporte vinculado ao MoveUp."
+          />
+        </Link>
+
+        {/* Histórico */}
+        <Link
+          to="/historico"
+          className="block cursor-pointer hover:-translate-y-1 transition-transform"
+        >
+          <Card
+            icone="📊"
+            titulo="Histórico de geração"
+            descricao="Veja o histórico completo de GreenPoints gerados."
+          />
+        </Link>
+
+      </div>
+
+    </section>
       {/* Bloco de Destaque */}
       <section className="bg-gradient-to-r from-dark to-[#2a2f7e] rounded-2xl p-6 sm:p-8 flex items-center gap-6 shadow-lg">
         <span className="text-4xl shrink-0">🛡️</span>
