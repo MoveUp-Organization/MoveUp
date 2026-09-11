@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
+
 import logo from '../../img/logo.png';
 
 interface CadastroFormData {
@@ -24,31 +25,57 @@ export default function Cadastro() {
   const onSubmit = (data: CadastroFormData) => {
     sessionStorage.setItem(
       'moveup_cadastro',
-      JSON.stringify({ nome: data.nome, email: data.email })
+      JSON.stringify({
+        nome: data.nome,
+        email: data.email,
+      })
     );
+
     navigate('/login');
   };
 
   return (
-    <main className="min-h-screen flex items-center justify-center px-4 py-12 bg-gradient-to-br from-light via-[#d7e9ff] to-[#cbb6ff]">
-      <section className="w-full max-w-[900px] bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
-        {/* Lado Esquerdo — Info */}
-        <div className="md:w-1/2 bg-gradient-to-br from-secondary to-purple p-8 sm:p-12 flex flex-col justify-center items-center text-white text-center">
-          <img src={logo} alt="Logo MoveUp" className="w-40 mb-6 drop-shadow-lg" />
-          <p className="text-white/90 text-lg leading-relaxed">
+    <main className="min-h-screen flex items-center justify-center px-4 py-12 bg-gradient-to-br from-[#dbeafe] via-[#e0e7ff] to-[#ddd6fe]">
+
+      <section className="w-full max-w-[1100px] bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+
+        {/* Lado Esquerdo — Logo */}
+        <div className="md:w-1/2 min-h-[550px] bg-gradient-to-br from-[#bfdbfe] via-[#c7d2fe] to-[#d8b4fe] p-8 sm:p-12 flex flex-col justify-center items-center text-center">
+
+          <img
+            src={logo}
+            alt="Logo MoveUp"
+            className="w-[600px] max-w-none h-auto mb-6 drop-shadow-lg translate-x-4"
+          />
+
+          <p className="text-[#6b6b72] text-base sm:text-lg leading-relaxed max-w-md">
             Crie sua conta para acessar a plataforma e começar a acumular GreenPoints.
           </p>
+
         </div>
 
         {/* Lado Direito — Formulário */}
         <div className="md:w-1/2 p-8 sm:p-12">
-          <h1 className="text-3xl font-extrabold text-dark mb-6">Criar Conta</h1>
 
-          <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-4">
+          <h1 className="text-3xl font-extrabold text-dark mb-6">
+            Criar Conta
+          </h1>
+
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            noValidate
+            className="space-y-4"
+          >
+
+            {/* Nome */}
             <div>
-              <label htmlFor="cadNome" className="block text-sm font-semibold text-dark mb-1">
+              <label
+                htmlFor="cadNome"
+                className="block text-sm font-semibold text-dark mb-1"
+              >
                 Nome
               </label>
+
               <input
                 type="text"
                 id="cadNome"
@@ -60,19 +87,33 @@ export default function Cadastro() {
                 }`}
                 {...register('nome', {
                   required: 'O nome é obrigatório.',
-                  minLength: { value: 3, message: 'O nome deve ter pelo menos 3 caracteres.' },
-                  maxLength: { value: 80, message: 'O nome deve ter no máximo 80 caracteres.' },
+                  minLength: {
+                    value: 3,
+                    message: 'O nome deve ter pelo menos 3 caracteres.',
+                  },
+                  maxLength: {
+                    value: 80,
+                    message: 'O nome deve ter no máximo 80 caracteres.',
+                  },
                 })}
               />
+
               {errors.nome && (
-                <p className="text-danger text-xs mt-1 font-medium">{errors.nome.message}</p>
+                <p className="text-danger text-xs mt-1 font-medium">
+                  {errors.nome.message}
+                </p>
               )}
             </div>
 
+            {/* Email */}
             <div>
-              <label htmlFor="cadEmail" className="block text-sm font-semibold text-dark mb-1">
+              <label
+                htmlFor="cadEmail"
+                className="block text-sm font-semibold text-dark mb-1"
+              >
                 Email
               </label>
+
               <input
                 type="email"
                 id="cadEmail"
@@ -90,15 +131,23 @@ export default function Cadastro() {
                   },
                 })}
               />
+
               {errors.email && (
-                <p className="text-danger text-xs mt-1 font-medium">{errors.email.message}</p>
+                <p className="text-danger text-xs mt-1 font-medium">
+                  {errors.email.message}
+                </p>
               )}
             </div>
 
+            {/* Senha */}
             <div>
-              <label htmlFor="cadSenha" className="block text-sm font-semibold text-dark mb-1">
+              <label
+                htmlFor="cadSenha"
+                className="block text-sm font-semibold text-dark mb-1"
+              >
                 Senha
               </label>
+
               <input
                 type="password"
                 id="cadSenha"
@@ -110,19 +159,33 @@ export default function Cadastro() {
                 }`}
                 {...register('senha', {
                   required: 'A senha é obrigatória.',
-                  minLength: { value: 5, message: 'A senha deve ter pelo menos 5 caracteres.' },
-                  maxLength: { value: 30, message: 'A senha deve ter no máximo 30 caracteres.' },
+                  minLength: {
+                    value: 5,
+                    message: 'A senha deve ter pelo menos 5 caracteres.',
+                  },
+                  maxLength: {
+                    value: 30,
+                    message: 'A senha deve ter no máximo 30 caracteres.',
+                  },
                 })}
               />
+
               {errors.senha && (
-                <p className="text-danger text-xs mt-1 font-medium">{errors.senha.message}</p>
+                <p className="text-danger text-xs mt-1 font-medium">
+                  {errors.senha.message}
+                </p>
               )}
             </div>
 
+            {/* Confirmar Senha */}
             <div>
-              <label htmlFor="cadConfirmarSenha" className="block text-sm font-semibold text-dark mb-1">
+              <label
+                htmlFor="cadConfirmarSenha"
+                className="block text-sm font-semibold text-dark mb-1"
+              >
                 Confirmar Senha
               </label>
+
               <input
                 type="password"
                 id="cadConfirmarSenha"
@@ -138,6 +201,7 @@ export default function Cadastro() {
                     value === senhaAtual || 'As senhas não coincidem.',
                 })}
               />
+
               {errors.confirmarSenha && (
                 <p className="text-danger text-xs mt-1 font-medium">
                   {errors.confirmarSenha.message}
@@ -145,6 +209,7 @@ export default function Cadastro() {
               )}
             </div>
 
+            {/* Botão Cadastrar */}
             <button
               type="submit"
               disabled={isSubmitting}
@@ -152,16 +217,25 @@ export default function Cadastro() {
             >
               {isSubmitting ? 'Criando conta...' : 'Cadastrar'}
             </button>
+
           </form>
 
+          {/* Login */}
           <p className="text-center text-sm text-gray-400 mt-6">
             Já possui uma conta?{' '}
-            <Link to="/login" className="text-secondary font-bold hover:underline">
+
+            <Link
+              to="/login"
+              className="text-secondary font-bold hover:underline"
+            >
               Fazer Login
             </Link>
           </p>
+
         </div>
+
       </section>
+
     </main>
   );
 }
