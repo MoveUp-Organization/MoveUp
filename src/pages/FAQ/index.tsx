@@ -106,8 +106,7 @@ export default function FAQ() {
                 <div
                   className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${
                     isOpen ? 'max-h-40 pb-6 opacity-100' : 'max-h-0 opacity-0'
-                  }`}
-                >
+                  }`}>
                   <p className="text-gray-500 pl-12">{item.resposta}</p>
                 </div>
               </article>
