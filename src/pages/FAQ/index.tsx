@@ -27,6 +27,13 @@ const faqData: FaqItemData[] = [
     pergunta: 'Como posso resgatar passagens?',
     resposta: 'Acesse a página de Voucher, escolha o tipo de transporte e converta seus GreenPoints em créditos de passagem.',
   },
+  {
+
+  id: 5,
+  pergunta: 'Como acumulo GreenPoints?',
+  resposta:
+    'Os GreenPoints são acumulados ao realizar atividades e missões relacionadas à mobilidade sustentável dentro da plataforma. Esses pontos podem posteriormente ser utilizados para resgatar benefícios disponíveis no MoveUp.',
+},
 ];
 
 export default function FAQ() {
@@ -82,7 +89,7 @@ export default function FAQ() {
                 <button
                   onClick={() => toggleAccordion(item.id)}
                   className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
-                >
+              >
                   <div className="flex items-center gap-4">
                     <span className="text-gray-300 font-bold text-xl w-8">
                       {String(index + 1).padStart(2, '0')}
@@ -99,8 +106,7 @@ export default function FAQ() {
                 <div
                   className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${
                     isOpen ? 'max-h-40 pb-6 opacity-100' : 'max-h-0 opacity-0'
-                  }`}
-                >
+                  }`}>
                   <p className="text-gray-500 pl-12">{item.resposta}</p>
                 </div>
               </article>
