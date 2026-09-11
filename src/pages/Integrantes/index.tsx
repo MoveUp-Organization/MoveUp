@@ -4,6 +4,9 @@ import fotoIsa from '../../img/fotoIsa.png';
 import fotoMih from '../../img/fotoMih.png';
 import fotoMarina from '../../img/fotoMarina.png';
 
+import githubIcon from '../../img/github.png';
+import linkedinIcon from '../../img/lkd.png';
+
 export default function Integrantes() {
   const equipe = [
     {
@@ -50,21 +53,26 @@ export default function Integrantes() {
 
   return (
     <main className="max-w-[1200px] mx-auto px-4 sm:px-8 py-10">
+
       <section className="text-center mb-12">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-dark mb-3">
           Integrantes da Equipe
         </h2>
+
         <p className="text-gray-500 text-lg">
           Conheça os membros responsáveis pelo projeto MoveUp.
         </p>
       </section>
 
       <section className="flex flex-wrap justify-center gap-8">
+
         {equipe.map((integrante, index) => (
+
           <article
             key={index}
             className="bg-white rounded-3xl p-8 w-full max-w-[320px] text-center shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col items-center"
           >
+
             <div className="w-32 h-32 rounded-full overflow-hidden mb-5 border-4 border-white shadow-md bg-gray-100">
               <img
                 src={integrante.foto}
@@ -72,33 +80,59 @@ export default function Integrantes() {
                 className="w-full h-full object-cover"
               />
             </div>
+
             <h3 className="text-xl font-bold text-dark mb-1 h-[56px] flex items-center justify-center">
               {integrante.nome}
             </h3>
-            <p className="text-primary font-bold mb-1">RM: {integrante.rm}</p>
-            <p className="text-gray-500 text-sm mb-6">{integrante.cargo}</p>
-            
+
+            <p className="text-primary font-bold mb-1">
+              RM: {integrante.rm}
+            </p>
+
+            <p className="text-gray-500 text-sm mb-6">
+              {integrante.cargo}
+            </p>
+
             <div className="flex gap-3 w-full mt-auto">
+
+              {/* GitHub */}
               <a
                 href={integrante.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 py-2 rounded-xl bg-gray-800 text-white font-bold text-sm hover:bg-gray-700 transition-colors"
+                className="flex-1 py-2 rounded-xl bg-gray-800 text-white font-bold text-sm hover:bg-gray-700 transition-colors flex items-center justify-center gap-2"
               >
+                <img
+                  src={githubIcon}
+                  alt="GitHub"
+                  className="w-5 h-5 object-contain"
+                />
                 GitHub
               </a>
+
+              {/* LinkedIn */}
               <a
                 href={integrante.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 py-2 rounded-xl bg-[#0077b5] text-white font-bold text-sm hover:bg-[#005e93] transition-colors"
+                className="flex-1 py-2 rounded-xl bg-[#0077b5] text-white font-bold text-sm hover:bg-[#005e93] transition-colors flex items-center justify-center gap-2"
               >
+                <img
+                  src={linkedinIcon}
+                  alt="LinkedIn"
+                  className="w-5 h-5 object-contain"
+                />
                 LinkedIn
               </a>
+
             </div>
+
           </article>
+
         ))}
+
       </section>
+
     </main>
   );
 }

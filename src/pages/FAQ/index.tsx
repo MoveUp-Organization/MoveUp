@@ -27,6 +27,13 @@ const faqData: FaqItemData[] = [
     pergunta: 'Como posso resgatar passagens?',
     resposta: 'Acesse a página de Voucher, escolha o tipo de transporte e converta seus GreenPoints em créditos de passagem.',
   },
+  {
+
+  id: 5,
+  pergunta: 'Como acumulo GreenPoints?',
+  resposta:
+    'Os GreenPoints são acumulados ao realizar atividades e missões relacionadas à mobilidade sustentável dentro da plataforma. Esses pontos podem posteriormente ser utilizados para resgatar benefícios disponíveis no MoveUp.',
+},
 ];
 
 export default function FAQ() {
