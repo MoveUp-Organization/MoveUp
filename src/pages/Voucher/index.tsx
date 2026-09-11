@@ -16,8 +16,8 @@ export default function Conversao() {
     {
       id: 2,
       icone: '🌱',
-      titulo: 'Ação Sustentável',
-      descricao: 'Converta seus pontos em uma árvore plantada por nós.',
+      titulo: 'Destaque no Ranking',
+      descricao: 'Use seus pontos para destacar seu perfil no ranking semanal da MoveUp.',
       custo: 800,
     },
     {
@@ -48,11 +48,11 @@ export default function Conversao() {
   return (
     <main className="max-w-[1200px] mx-auto px-4 sm:px-8 py-10">
       <section className="text-center mb-10">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-dark mb-3">Conversão de Pontos</h2>
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-dark mb-3">Vouchers</h2>
         <p className="text-gray-500 text-lg">Transforme suas conquistas em benefícios reais!</p>
       </section>
 
-      <section className="bg-gradient-to-br from-purple to-pink-500 text-white p-8 rounded-3xl text-center max-w-[400px] mx-auto mb-12 shadow-lg shadow-purple/20">
+      <section className="bg-gradient-to-br from-purple to-blue-500 text-white p-8 rounded-3xl text-center max-w-[400px] mx-auto mb-12 shadow-lg shadow-purple/20">
         <h3 className="text-white/90 text-lg font-medium mb-2">Seu Saldo Atual</h3>
         <p className="text-4xl sm:text-5xl font-bold">
           {saldoAtual.toLocaleString('pt-BR')} <span className="text-2xl font-normal opacity-80">pts</span>
