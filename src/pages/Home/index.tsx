@@ -40,10 +40,25 @@ export default function Home() {
   ]);
 
   const metricas: Metrica[] = [
-    { titulo: 'Seu Saldo', valor: greenPoints.toLocaleString('pt-BR'), label: 'GreenPoints acumulados', cor: 'from-primary to-secondary' },
-    { titulo: 'Impacto Ambiental', valor: `${co2Economizado.toFixed(1).replace('.', ',')} kg`, label: 'de CO₂ economizados', cor: 'from-green to-emerald-400' },
-    { titulo: 'Distância Sustentável', valor: `${distanciaSustentavel.toFixed(1).replace('.', ',')} km`, label: 'percorridos de forma limpa', cor: 'from-cyan to-blue-400' },
-  ];
+  {
+    titulo: 'Seu Saldo',
+    valor: greenPoints.toLocaleString('pt-BR'),
+    label: 'GreenPoints acumulados',
+    cor: 'from-blue-500 to-blue-900',
+  },
+  {
+    titulo: 'Impacto Ambiental',
+    valor: `${co2Economizado.toFixed(1).replace('.', ',')} kg`,
+    label: 'de CO₂ economizados',
+    cor: 'from-purple-700 to-violet-500',
+  },
+  {
+    titulo: 'Distância Sustentável',
+    valor: `${distanciaSustentavel.toFixed(1).replace('.', ',')} km`,
+    label: 'percorridos de forma limpa',
+    cor: 'from-cyan-600 to-blue-800',
+  },
+];
 
   useEffect(() => {
     document.title = 'MoveUP - Mobilidade Sustentável';
