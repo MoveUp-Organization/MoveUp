@@ -24,8 +24,7 @@ interface MissaoSemana {
 
 export default function Home() {
   const [nomeUsuario, setNomeUsuario] = useState('EcoViajante');
-
-  const [greenPoints, setGreenPoints] = useState(2450);
+  const [movePoints, setMovePoints] = useState(1450);
   const [co2Economizado, setCo2Economizado] = useState(14.8);
   const [distanciaSustentavel, setDistanciaSustentavel] = useState(42.5);
 
@@ -74,8 +73,8 @@ export default function Home() {
   const metricas: Metrica[] = [
     {
       titulo: 'Seu Saldo',
-      valor: greenPoints.toLocaleString('pt-BR'),
-      label: 'GreenPoints acumulados',
+      valor: movePoints.toLocaleString('pt-BR'),
+      label: 'MovePoints acumulados',
       cor: 'from-blue-500 to-blue-900',
     },
     {
@@ -131,7 +130,7 @@ export default function Home() {
 
     const pontosGanhos = pontosMap[id] || 200;
 
-    setGreenPoints((prev) => prev + pontosGanhos);
+    setMovePoints((prev) => prev + pontosGanhos);
     setCo2Economizado((prev) => prev + 2.3);
     setDistanciaSustentavel((prev) => prev + 5);
 
@@ -147,7 +146,7 @@ export default function Home() {
     setAtividades((prev) => [novAtividade, ...prev]);
 
     alert(
-      `🎉 Missão Concluída! Você ganhou +${pontosGanhos} GreenPoints!`
+      `🎉 Missão Concluída! Você ganhou +${pontosGanhos} MovePoints!`
     );
   };
 

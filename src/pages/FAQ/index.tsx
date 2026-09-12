@@ -30,9 +30,9 @@ const faqData: FaqItemData[] = [
   {
 
   id: 5,
-  pergunta: 'Como acumulo GreenPoints?',
+  pergunta: 'Como acumulo MovePoints?',
   resposta:
-    'Os GreenPoints são acumulados ao realizar atividades e missões relacionadas à mobilidade sustentável dentro da plataforma. Esses pontos podem posteriormente ser utilizados para resgatar benefícios disponíveis no MoveUp.',
+    'Os MovePoints são acumulados ao realizar atividades e missões relacionadas à mobilidade sustentável dentro da plataforma. Esses pontos podem posteriormente ser utilizados para resgatar benefícios disponíveis no MoveUp.',
 },
 ];
 

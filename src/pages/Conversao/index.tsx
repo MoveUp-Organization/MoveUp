@@ -7,7 +7,7 @@ interface DadosUsuario {
   saldo: number;
   co2Evitado: number;
   distanciaPercorrida: number;
-  greenPointsAcumulados: number;
+  movePointsAcumulados: number;
 }
 
 export default function Conversao() {
@@ -18,7 +18,7 @@ export default function Conversao() {
     saldo: 1450,
     co2Evitado: 12.5,
     distanciaPercorrida: 42.5,
-    greenPointsAcumulados: 2450,
+    movePointsAcumulados: 2450,
   });
 
   useEffect(() => {
@@ -51,9 +51,9 @@ export default function Conversao() {
           co2Evitado: parsedSaldo.co2Evitado ?? prev.co2Evitado,
           distanciaPercorrida:
             parsedSaldo.distanciaPercorrida ?? prev.distanciaPercorrida,
-          greenPointsAcumulados:
-            parsedSaldo.greenPointsAcumulados ??
-            prev.greenPointsAcumulados,
+          movePointsAcumulados:
+            parsedSaldo.movePointsAcumulados ??
+            prev.movePointsAcumulados,
         }));
       } catch (error) {
         console.error('Erro ao recuperar dados de saldo:', error);
@@ -67,7 +67,6 @@ export default function Conversao() {
 
   return (
     <main className="max-w-[1200px] mx-auto px-4 sm:px-8 py-6">
-
       {/* Saudação */}
       <section className="mb-6">
         <h1 className="text-2xl sm:text-3xl font-extrabold text-dark mb-1">
@@ -81,10 +80,8 @@ export default function Conversao() {
 
       {/* Dois blocos principais lado a lado */}
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-
         {/* Bloco Saldo */}
         <div className="bg-gradient-to-br from-primary to-secondary rounded-2xl p-6 sm:p-8 text-white shadow-lg relative">
-
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-base font-medium opacity-90">
               Saldo disponível
@@ -96,8 +93,8 @@ export default function Conversao() {
               className="p-2 rounded-full hover:bg-white/20 transition-colors cursor-pointer"
               aria-label={
                 saldoVisivel
-                  ? 'Ocultar saldo de GreenPoints'
-                  : 'Mostrar saldo de GreenPoints'
+                  ? 'Ocultar saldo de MovePoints'
+                  : 'Mostrar saldo de MovePoints'
               }
             >
               {saldoVisivel ? (
@@ -126,9 +123,8 @@ export default function Conversao() {
             {saldoVisivel ? (
               <p className="text-4xl sm:text-5xl font-extrabold tracking-tight">
                 {dados.saldo.toLocaleString('pt-BR')}{' '}
-
                 <span className="text-lg sm:text-xl font-medium opacity-80">
-                  GreenPoints
+                  MovePoints
                 </span>
               </p>
             ) : (
@@ -152,13 +148,11 @@ export default function Conversao() {
 
         {/* Bloco Indicadores */}
         <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-md">
-
           <h2 className="text-lg font-bold text-dark mb-5">
             Indicadores
           </h2>
 
           <div className="space-y-5">
-
             <div className="flex items-center gap-4">
               <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-green/10 text-2xl shrink-0">
                 🌿
@@ -201,28 +195,25 @@ export default function Conversao() {
 
               <div className="flex-1">
                 <p className="text-sm text-gray-500">
-                  GreenPoints acumulados
+                  MovePoints acumulados
                 </p>
 
                 <p className="text-xl font-bold text-dark">
-                  {dados.greenPointsAcumulados.toLocaleString('pt-BR')} pts
+                  {dados.movePointsAcumulados.toLocaleString('pt-BR')} pts
                 </p>
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
       {/* Ações Rápidas */}
       <section className="mb-8">
-
         <h2 className="text-lg font-bold text-dark mb-4">
           Ações rápidas
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-
           {/* Transferir pontos */}
           <Link
             to="/transferir-pontos"
@@ -231,7 +222,7 @@ export default function Conversao() {
             <Card
               icone="🔄"
               titulo="Transferir pontos"
-              descricao="Envie GreenPoints para outros usuários da plataforma."
+              descricao="Envie MovePoints para outros usuários da plataforma."
             />
           </Link>
 
@@ -255,22 +246,19 @@ export default function Conversao() {
             <Card
               icone="📊"
               titulo="Histórico de geração"
-              descricao="Veja o histórico completo de GreenPoints gerados."
+              descricao="Veja o histórico completo de MovePoints gerados."
             />
           </Link>
-
         </div>
       </section>
 
       {/* Bloco de Destaque */}
       <section className="bg-gradient-to-r from-dark to-[#2a2f7e] rounded-2xl p-6 sm:p-8 flex items-center gap-6 shadow-lg">
-
         <span className="text-4xl shrink-0">
           🛡️
         </span>
 
         <div className="flex-1">
-
           <h2 className="text-lg sm:text-xl font-bold text-white mb-1">
             Sua mobilidade é nossa prioridade
           </h2>
@@ -278,7 +266,6 @@ export default function Conversao() {
           <p className="text-white/70 text-sm sm:text-base">
             Segurança, sustentabilidade e praticidade.
           </p>
-
         </div>
 
         <svg
@@ -293,9 +280,7 @@ export default function Conversao() {
             clipRule="evenodd"
           />
         </svg>
-
       </section>
-
     </main>
   );
 }

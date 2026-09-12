@@ -30,7 +30,7 @@ const missoesData: MissaoDetalheData[] = [
     titulo: 'Primeiros Passos',
     descricao: 'Assista ao vídeo de introdução e aprenda a usar nossa plataforma sustentável.',
     descricaoCompleta:
-      'Complete o tutorial de boas-vindas assistindo ao vídeo introdutório da MoveUp. Entenda como acumular GreenPoints, concluir missões e converter seus pontos em benefícios reais para o transporte público.',
+      'Complete o tutorial de boas-vindas assistindo ao vídeo introdutório da MoveUp. Entenda como acumular MovePoints, concluir missões e converter seus pontos em benefícios reais para o transporte público.',
     recompensa: 150,
     categoria: 'Conteúdo',
     dificuldade: 'Fácil',
