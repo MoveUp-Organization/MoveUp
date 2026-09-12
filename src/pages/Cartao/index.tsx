@@ -19,21 +19,23 @@ export default function MeuCartao() {
   });
 
   useEffect(() => {
-    const usuarioSalvo = sessionStorage.getItem('moveup_user');
+    // Pega o nome verdadeiro informado no cadastro
+    const cadastroSalvo = sessionStorage.getItem('moveup_cadastro');
 
-    if (usuarioSalvo) {
+    if (cadastroSalvo) {
       try {
-        const usuario = JSON.parse(usuarioSalvo);
+        const cadastro = JSON.parse(cadastroSalvo);
 
         setDados((prev) => ({
           ...prev,
-          nome: usuario.nome || 'EcoViajante',
+          nome: cadastro.nome || 'EcoViajante',
         }));
       } catch {
-        console.log('Não foi possível carregar os dados do usuário.');
+        console.log('Não foi possível carregar os dados do cadastro.');
       }
     }
 
+    // Recupera os dados de saldo
     const saldoSalvo = sessionStorage.getItem('moveup_saldo');
 
     if (saldoSalvo) {
@@ -59,13 +61,14 @@ export default function MeuCartao() {
   return (
     <main className="max-w-[1200px] mx-auto px-4 sm:px-8 py-8">
 
-        <Link
+      {/* VOLTAR */}
+      <Link
         to="/conversao"
         className="inline-flex items-center gap-2 mb-6 text-primary font-semibold hover:text-secondary transition-colors"
-        >
+      >
         <span className="text-2xl leading-none">←</span>
         Voltar
-        </Link>
+      </Link>
 
       {/* CABEÇALHO DA PÁGINA */}
       <section className="mb-8">
@@ -384,7 +387,7 @@ export default function MeuCartao() {
         </div>
 
       </section>
-
+      
     </main>
   );
 }

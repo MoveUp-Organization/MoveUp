@@ -1,6 +1,5 @@
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
-
 import logo from '../../img/logo.png';
 
 interface CadastroFormData {
@@ -23,25 +22,26 @@ export default function Cadastro() {
   const senhaAtual = watch('senha');
 
   const onSubmit = (data: CadastroFormData) => {
-    sessionStorage.setItem(
-      'moveup_cadastro',
+    // Salva os dados da conta no navegador
+    localStorage.setItem(
+      'moveupUsuario',
       JSON.stringify({
         nome: data.nome,
         email: data.email,
+        senha: data.senha,
       })
     );
 
+    // Após cadastrar, vai para o login
     navigate('/login');
   };
 
   return (
     <main className="min-h-screen flex items-center justify-center px-4 py-12 bg-gradient-to-br from-[#dbeafe] via-[#e0e7ff] to-[#ddd6fe]">
-
       <section className="w-full max-w-[1100px] bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
 
         {/* Lado Esquerdo — Logo */}
         <div className="md:w-1/2 min-h-[550px] bg-gradient-to-br from-[#bfdbfe] via-[#c7d2fe] to-[#d8b4fe] p-8 sm:p-12 flex flex-col justify-center items-center text-center">
-
           <img
             src={logo}
             alt="Logo MoveUp"
@@ -51,12 +51,10 @@ export default function Cadastro() {
           <p className="text-[#6b6b72] text-base sm:text-lg leading-relaxed max-w-md">
             Crie sua conta para acessar a plataforma e começar a acumular GreenPoints.
           </p>
-
         </div>
 
         {/* Lado Direito — Formulário */}
         <div className="md:w-1/2 p-8 sm:p-12">
-
           <h1 className="text-3xl font-extrabold text-dark mb-6">
             Criar Conta
           </h1>
@@ -66,7 +64,6 @@ export default function Cadastro() {
             noValidate
             className="space-y-4"
           >
-
             {/* Nome */}
             <div>
               <label
@@ -217,13 +214,11 @@ export default function Cadastro() {
             >
               {isSubmitting ? 'Criando conta...' : 'Cadastrar'}
             </button>
-
           </form>
 
           {/* Login */}
           <p className="text-center text-sm text-gray-400 mt-6">
             Já possui uma conta?{' '}
-
             <Link
               to="/login"
               className="text-secondary font-bold hover:underline"
@@ -231,11 +226,8 @@ export default function Cadastro() {
               Fazer Login
             </Link>
           </p>
-
         </div>
-
       </section>
-
     </main>
   );
 }

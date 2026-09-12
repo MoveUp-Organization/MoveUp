@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link }from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Card from '../../components/Card/Card';
 
 interface DadosUsuario {
@@ -12,6 +12,7 @@ interface DadosUsuario {
 
 export default function Conversao() {
   const [saldoVisivel, setSaldoVisivel] = useState(false);
+
   const [dados, setDados] = useState<DadosUsuario>({
     nome: 'EcoViajante',
     saldo: 1450,
@@ -21,22 +22,42 @@ export default function Conversao() {
   });
 
   useEffect(() => {
-    const usuarioSalvo = sessionStorage.getItem('moveup_user');
-    if (usuarioSalvo) {
-      const parsed = JSON.parse(usuarioSalvo);
-      setDados((prev) => ({ ...prev, nome: parsed.nome || 'EcoViajante' }));
+    // Pega o nome verdadeiro informado no cadastro
+    const cadastroSalvo = sessionStorage.getItem('moveup_cadastro');
+
+    if (cadastroSalvo) {
+      try {
+        const parsed = JSON.parse(cadastroSalvo);
+
+        setDados((prev) => ({
+          ...prev,
+          nome: parsed.nome || 'EcoViajante',
+        }));
+      } catch (error) {
+        console.error('Erro ao recuperar dados do cadastro:', error);
+      }
     }
 
+    // Recupera os dados de saldo
     const saldoSalvo = sessionStorage.getItem('moveup_saldo');
+
     if (saldoSalvo) {
-      const parsedSaldo = JSON.parse(saldoSalvo);
-      setDados((prev) => ({
-        ...prev,
-        saldo: parsedSaldo.saldo ?? prev.saldo,
-        co2Evitado: parsedSaldo.co2Evitado ?? prev.co2Evitado,
-        distanciaPercorrida: parsedSaldo.distanciaPercorrida ?? prev.distanciaPercorrida,
-        greenPointsAcumulados: parsedSaldo.greenPointsAcumulados ?? prev.greenPointsAcumulados,
-      }));
+      try {
+        const parsedSaldo = JSON.parse(saldoSalvo);
+
+        setDados((prev) => ({
+          ...prev,
+          saldo: parsedSaldo.saldo ?? prev.saldo,
+          co2Evitado: parsedSaldo.co2Evitado ?? prev.co2Evitado,
+          distanciaPercorrida:
+            parsedSaldo.distanciaPercorrida ?? prev.distanciaPercorrida,
+          greenPointsAcumulados:
+            parsedSaldo.greenPointsAcumulados ??
+            prev.greenPointsAcumulados,
+        }));
+      } catch (error) {
+        console.error('Erro ao recuperar dados de saldo:', error);
+      }
     }
   }, []);
 
@@ -51,6 +72,7 @@ export default function Conversao() {
         <h1 className="text-2xl sm:text-3xl font-extrabold text-dark mb-1">
           Olá, {dados.nome}!
         </h1>
+
         <p className="text-gray-500 text-base sm:text-lg">
           Gerencie sua mobilidade de forma simples e sustentável.
         </p>
@@ -61,19 +83,36 @@ export default function Conversao() {
         {/* Bloco Saldo */}
         <div className="bg-gradient-to-br from-primary to-secondary rounded-2xl p-6 sm:p-8 text-white shadow-lg relative">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-base font-medium opacity-90">Saldo disponível</h2>
+            <h2 className="text-base font-medium opacity-90">
+              Saldo disponível
+            </h2>
+
             <button
               onClick={toggleSaldo}
               className="p-2 rounded-full hover:bg-white/20 transition-colors cursor-pointer"
-              aria-label={saldoVisivel ? 'Ocultar saldo de GreenPoints' : 'Mostrar saldo de GreenPoints'}
+              aria-label={
+                saldoVisivel
+                  ? 'Ocultar saldo de GreenPoints'
+                  : 'Mostrar saldo de GreenPoints'
+              }
             >
               {saldoVisivel ? (
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                  <path d="M12 4.5C7 4.5 2.7 7.6 1 12c1.7 4.4 6 7.5 11 7.5s9.3-3.1 11-7.5c-1.7-4.4-6-7.5-11-7.5zM12 17c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zm0-8c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3z"/>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path d="M12 4.5C7 4.5 2.7 7.6 1 12c1.7 4.4 6 7.5 11 7.5s9.3-3.1 11-7.5c-1.7-4.4-6-7.5-11-7.5zM12 17c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zm0-8c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3z" />
                 </svg>
               ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                  <path d="M12 7c2.8 0 5 2.2 5 5 0 .6-.1 1.3-.4 1.8l2.9 2.9c1.5-1.3 2.7-2.9 3.5-4.7-1.7-4.4-6-7.5-11-7.5-1.4 0-2.7.3-4 .7l2.2 2.2c.5-.3 1.2-.4 1.8-.4zM2 4.3l2.3 2.3.4.4C3.2 8.3 2 10 1 12c1.7 4.4 6 7.5 11 7.5 1.5 0 3-.3 4.4-.8l.4.4 2.9 2.9 1.3-1.3L3.3 3 2 4.3zm5.5 5.5 1.5 1.5c0 .2-.1.5-.1.7 0 1.7 1.3 3 3 3 .2 0 .5 0 .7-.1l1.5 1.5c-.7.3-1.4.6-2.2.6-2.8 0-5-2.2-5-5 0-.8.2-1.5.6-2.2zm4.3-.8 3.2 3.2V12c0-1.7-1.3-3-3-3h-.2z"/>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path d="M12 7c2.8 0 5 2.2 5 5 0 .6-.1 1.3-.4 1.8l2.9 2.9c1.5-1.3 2.7-2.9 3.5-4.7-1.7-4.4-6-7.5-11-7.5-1.4 0-2.7.3-4 .7l2.2 2.2c.5-.3 1.2-.4 1.8-.4zM2 4.3l2.3 2.3.4.4C3.2 8.3 2 10 1 12c1.7 4.4 6 7.5 11 7.5 1.5 0 3-.3 4.4-.8l.4.4 2.9 2.9 1.3-1.3L3.3 3 2 4.3zm5.5 5.5 1.5 1.5c0 .2-.1.5-.1.7 0 1.7 1.3 3 3 3 .2 0 .5 0 .7-.1l1.5 1.5c-.7.3-1.4.6-2.2.6-2.8 0-5-2.2-5-5 0-.8.2-1.5.6-2.2zm4.3-.8 3.2 3.2V12c0-1.7-1.3-3-3-3h-.2z" />
                 </svg>
               )}
             </button>
@@ -83,7 +122,9 @@ export default function Conversao() {
             {saldoVisivel ? (
               <p className="text-4xl sm:text-5xl font-extrabold tracking-tight">
                 {dados.saldo.toLocaleString('pt-BR')}{' '}
-                <span className="text-lg sm:text-xl font-medium opacity-80">GreenPoints</span>
+                <span className="text-lg sm:text-xl font-medium opacity-80">
+                  GreenPoints
+                </span>
               </p>
             ) : (
               <p className="text-4xl sm:text-5xl font-extrabold tracking-tight">
@@ -106,15 +147,21 @@ export default function Conversao() {
 
         {/* Bloco Indicadores */}
         <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-md">
-          <h2 className="text-lg font-bold text-dark mb-5">Indicadores</h2>
+          <h2 className="text-lg font-bold text-dark mb-5">
+            Indicadores
+          </h2>
 
           <div className="space-y-5">
             <div className="flex items-center gap-4">
               <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-green/10 text-2xl shrink-0">
                 🌿
               </span>
+
               <div className="flex-1">
-                <p className="text-sm text-gray-500">CO₂ evitado</p>
+                <p className="text-sm text-gray-500">
+                  CO₂ evitado
+                </p>
+
                 <p className="text-xl font-bold text-dark">
                   {dados.co2Evitado.toFixed(1).replace('.', ',')} kg
                 </p>
@@ -125,10 +172,17 @@ export default function Conversao() {
               <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-cyan/10 text-2xl shrink-0">
                 🚲
               </span>
+
               <div className="flex-1">
-                <p className="text-sm text-gray-500">Distância percorrida</p>
+                <p className="text-sm text-gray-500">
+                  Distância percorrida
+                </p>
+
                 <p className="text-xl font-bold text-dark">
-                  {dados.distanciaPercorrida.toFixed(1).replace('.', ',')} km
+                  {dados.distanciaPercorrida
+                    .toFixed(1)
+                    .replace('.', ',')}{' '}
+                  km
                 </p>
               </div>
             </div>
@@ -137,8 +191,12 @@ export default function Conversao() {
               <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-secondary/10 text-2xl shrink-0">
                 ⭐
               </span>
+
               <div className="flex-1">
-                <p className="text-sm text-gray-500">GreenPoints acumulados</p>
+                <p className="text-sm text-gray-500">
+                  GreenPoints acumulados
+                </p>
+
                 <p className="text-xl font-bold text-dark">
                   {dados.greenPointsAcumulados.toLocaleString('pt-BR')} pts
                 </p>
@@ -150,63 +208,65 @@ export default function Conversao() {
 
       {/* Ações Rápidas */}
       <section className="mb-8">
+        <h2 className="text-lg font-bold text-dark mb-4">
+          Ações rápidas
+        </h2>
 
-      <h2 className="text-lg font-bold text-dark mb-4">
-        Ações rápidas
-      </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {/* Transferir pontos */}
+          <Link
+            to="/transferir-pontos"
+            className="block cursor-pointer hover:-translate-y-1 transition-transform"
+          >
+            <Card
+              icone="🔄"
+              titulo="Transferir pontos"
+              descricao="Envie GreenPoints para outros usuários da plataforma."
+            />
+          </Link>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {/* Meu cartão */}
+          <Link
+            to="/meu-cartao"
+            className="block cursor-pointer hover:-translate-y-1 transition-transform"
+          >
+            <Card
+              icone="💳"
+              titulo="Meu cartão"
+              descricao="Gerencie seu cartão de transporte vinculado ao MoveUp."
+            />
+          </Link>
 
-        {/* Transferir pontos */}
-        <Link
-          to="/transferir-pontos"
-          className="block cursor-pointer hover:-translate-y-1 transition-transform"
-        >
-          <Card
-            icone="🔄"
-            titulo="Transferir pontos"
-            descricao="Envie GreenPoints para outros usuários da plataforma."
-          />
-        </Link>
+          {/* Histórico */}
+          <Link
+            to="/historico"
+            className="block cursor-pointer hover:-translate-y-1 transition-transform"
+          >
+            <Card
+              icone="📊"
+              titulo="Histórico de geração"
+              descricao="Veja o histórico completo de GreenPoints gerados."
+            />
+          </Link>
+        </div>
+      </section>
 
-        {/* Meu cartão */}
-        <Link
-          to="/meu-cartao"
-          className="block cursor-pointer hover:-translate-y-1 transition-transform"
-        >
-          <Card
-            icone="💳"
-            titulo="Meu cartão"
-            descricao="Gerencie seu cartão de transporte vinculado ao MoveUp."
-          />
-        </Link>
-
-        {/* Histórico */}
-        <Link
-          to="/historico"
-          className="block cursor-pointer hover:-translate-y-1 transition-transform"
-        >
-          <Card
-            icone="📊"
-            titulo="Histórico de geração"
-            descricao="Veja o histórico completo de GreenPoints gerados."
-          />
-        </Link>
-
-      </div>
-
-    </section>
       {/* Bloco de Destaque */}
       <section className="bg-gradient-to-r from-dark to-[#2a2f7e] rounded-2xl p-6 sm:p-8 flex items-center gap-6 shadow-lg">
-        <span className="text-4xl shrink-0">🛡️</span>
+        <span className="text-4xl shrink-0">
+          🛡️
+        </span>
+
         <div className="flex-1">
           <h2 className="text-lg sm:text-xl font-bold text-white mb-1">
             Sua mobilidade é nossa prioridade
           </h2>
+
           <p className="text-white/70 text-sm sm:text-base">
             Segurança, sustentabilidade e praticidade.
           </p>
         </div>
+
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
