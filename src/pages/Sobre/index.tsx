@@ -137,7 +137,7 @@ export default function Sobre() {
       <section className="mb-16">
         <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-md">
           <h3 className="text-2xl sm:text-3xl font-bold text-dark mb-6 text-center">
-            Conversão de GreenPoints
+            Conversão de MovePoints
           </h3>
 
           <p className="text-gray-600 leading-relaxed text-center max-w-[800px] mx-auto mb-8">

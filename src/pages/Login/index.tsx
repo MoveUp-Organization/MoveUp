@@ -9,6 +9,12 @@ interface LoginFormData {
   senha: string;
 }
 
+interface Usuario {
+  nome: string;
+  email: string;
+  senha: string;
+}
+
 export default function Login() {
   const navigate = useNavigate();
 
@@ -19,25 +25,47 @@ export default function Login() {
   } = useForm<LoginFormData>();
 
   const onSubmit = (data: LoginFormData) => {
-    sessionStorage.setItem(
-      'moveup_user',
-      JSON.stringify({
-        nome: data.email.split('@')[0],
-        email: data.email,
-      })
-    );
+    // Pega os dados cadastrados no navegador
+    const usuarioSalvo = localStorage.getItem('moveupUsuario');
 
-    navigate('/home');
+    // Verifica se existe uma conta cadastrada
+    if (!usuarioSalvo) {
+      alert('Nenhuma conta cadastrada. Cadastre-se primeiro.');
+      return;
+    }
+
+    try {
+      const usuario: Usuario = JSON.parse(usuarioSalvo);
+
+      // Verifica email e senha
+      if (
+        data.email !== usuario.email ||
+        data.senha !== usuario.senha
+      ) {
+        alert('Email ou senha incorretos.');
+        return;
+      }
+
+      // Marca o usuário como logado
+      localStorage.setItem('moveupLogado', 'true');
+
+      // Avisa o cabeçalho que o login foi realizado
+      window.dispatchEvent(new Event('loginAtualizado'));
+
+      // Vai para a Home
+      navigate('/home');
+    } catch {
+      alert('Ocorreu um erro ao acessar os dados da conta.');
+    }
   };
 
   return (
     <main className="min-h-screen flex items-center justify-center px-4 py-12 bg-gradient-to-br from-[#dbeafe] via-[#e0e7ff] to-[#ddd6fe]">
-
       <section className="w-full max-w-[1100px] bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
 
         {/* Lado Esquerdo — Logo */}
         <div className="md:w-1/2 min-h-[550px] bg-gradient-to-br from-[#bfdbfe] via-[#c7d2fe] to-[#d8b4fe] p-8 sm:p-12 flex flex-col justify-center items-center text-center">
-          
+
           <div className="flex flex-col items-center justify-center text-center">
 
             <img
@@ -208,9 +236,7 @@ export default function Login() {
           </p>
 
         </div>
-
       </section>
-
     </main>
   );
 }
