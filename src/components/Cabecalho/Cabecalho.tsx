@@ -77,7 +77,7 @@ export default function Cabecalho() {
         >
 
           <li>
-            <NavLink to="/" className={linkClasses} onClick={fecharMenu} end>
+            <NavLink to="/inicio" className={linkClasses} onClick={fecharMenu} end>
               Início
             </NavLink>
           </li>
