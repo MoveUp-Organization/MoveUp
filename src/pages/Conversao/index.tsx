@@ -23,7 +23,7 @@ export default function Conversao() {
 
   useEffect(() => {
     // Pega o nome verdadeiro informado no cadastro
-    const cadastroSalvo = sessionStorage.getItem('moveup_cadastro');
+    const cadastroSalvo = localStorage.getItem('moveupUsuario');
 
     if (cadastroSalvo) {
       try {
@@ -67,6 +67,7 @@ export default function Conversao() {
 
   return (
     <main className="max-w-[1200px] mx-auto px-4 sm:px-8 py-6">
+
       {/* Saudação */}
       <section className="mb-6">
         <h1 className="text-2xl sm:text-3xl font-extrabold text-dark mb-1">
@@ -80,14 +81,17 @@ export default function Conversao() {
 
       {/* Dois blocos principais lado a lado */}
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+
         {/* Bloco Saldo */}
         <div className="bg-gradient-to-br from-primary to-secondary rounded-2xl p-6 sm:p-8 text-white shadow-lg relative">
+
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-base font-medium opacity-90">
               Saldo disponível
             </h2>
 
             <button
+              type="button"
               onClick={toggleSaldo}
               className="p-2 rounded-full hover:bg-white/20 transition-colors cursor-pointer"
               aria-label={
@@ -122,6 +126,7 @@ export default function Conversao() {
             {saldoVisivel ? (
               <p className="text-4xl sm:text-5xl font-extrabold tracking-tight">
                 {dados.saldo.toLocaleString('pt-BR')}{' '}
+
                 <span className="text-lg sm:text-xl font-medium opacity-80">
                   GreenPoints
                 </span>
@@ -147,11 +152,13 @@ export default function Conversao() {
 
         {/* Bloco Indicadores */}
         <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-md">
+
           <h2 className="text-lg font-bold text-dark mb-5">
             Indicadores
           </h2>
 
           <div className="space-y-5">
+
             <div className="flex items-center gap-4">
               <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-green/10 text-2xl shrink-0">
                 🌿
@@ -202,17 +209,20 @@ export default function Conversao() {
                 </p>
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
       {/* Ações Rápidas */}
       <section className="mb-8">
+
         <h2 className="text-lg font-bold text-dark mb-4">
           Ações rápidas
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
           {/* Transferir pontos */}
           <Link
             to="/transferir-pontos"
@@ -248,16 +258,19 @@ export default function Conversao() {
               descricao="Veja o histórico completo de GreenPoints gerados."
             />
           </Link>
+
         </div>
       </section>
 
       {/* Bloco de Destaque */}
       <section className="bg-gradient-to-r from-dark to-[#2a2f7e] rounded-2xl p-6 sm:p-8 flex items-center gap-6 shadow-lg">
+
         <span className="text-4xl shrink-0">
           🛡️
         </span>
 
         <div className="flex-1">
+
           <h2 className="text-lg sm:text-xl font-bold text-white mb-1">
             Sua mobilidade é nossa prioridade
           </h2>
@@ -265,6 +278,7 @@ export default function Conversao() {
           <p className="text-white/70 text-sm sm:text-base">
             Segurança, sustentabilidade e praticidade.
           </p>
+
         </div>
 
         <svg
@@ -275,11 +289,13 @@ export default function Conversao() {
         >
           <path
             fillRule="evenodd"
-            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 011.06-.02z"
             clipRule="evenodd"
           />
         </svg>
+
       </section>
+
     </main>
   );
 }

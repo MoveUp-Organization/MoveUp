@@ -78,7 +78,7 @@ export default function Cabecalho() {
 
         {/* LOGO */}
         <Link
-          to="/"
+          to="/inicio"
           onClick={fecharMenu}
         >
           <img
