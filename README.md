@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./src/img/logo.png" width="280" alt="Logo MoveUp">
+    <img src="./public/favicons/icon_moveup.png" width="180" alt="Logo MoveUp">
 </p>
 
 <h1 align="center">MoveUp — Plataforma de Mobilidade Sustentável</h1>
@@ -230,127 +230,83 @@ O projeto também possui o componente **Watson Assistant**, integrado à estrutu
 
 ---
 
-## 👥 Integrantes & Autores
+## Integrantes & Autores
 
-Abaixo encontram-se os integrantes responsáveis pelo desenvolvimento do projeto MoveUP:
+Abaixo encontram-se os integrantes responsáveis pelo desenvolvimento do projeto MoveUP.
 
-<table align="center">
-  <tr>
-    <td align="center" width="220">
-      <img src="./src/img/fotoIsa.png" width="120" alt="Foto de Isabelle Ferreira">
-      <br><br>
+### Isabelle Ferreira Neri Feitoza
 
-      <strong>Isabelle Ferreira Neri Feitoza</strong>
-      <br>
-      RM 573507
-      <br>
-      Desenvolvedora Front-End
-      <br>
-      Turma: 1TDSPH
-      <br><br>
+<p align="center">
+  <img src="./src/img/fotoIsa.png" width="120" alt="Foto de Isabelle Ferreira">
+</p>
 
-      <a href="https://www.linkedin.com/in/isabelle-ferreira-8844593ab/">
-        <img src="./src/img/lkd.png" width="32" alt="LinkedIn">
-      </a>
-      &nbsp;&nbsp;
-      <a href="https://github.com/isabelleferreiraa">
-        <img src="./src/img/github.png" width="32" alt="GitHub">
-      </a>
-    </td>
+**RM:** 573507  
+**Função:** Desenvolvedora Front-End  
+**Turma:** 1TDSPH
 
-    <td align="center" width="220">
-      <img src="./src/img/fotoAndre.png" width="120" alt="Foto de André Luiz">
-      <br><br>
+[![LinkedIn](./src/img/lkd.png)](https://www.linkedin.com/in/isabelle-ferreira-8844593ab/)
+[![GitHub](./src/img/github.png)](https://github.com/isabelleferreiraa)
 
-      <strong>André Luiz Ramos Forastieri</strong>
-      <br>
-      RM 572203
-      <br>
-      Desenvolvedor de Interface
-      <br>
-      Turma: 1TDSPH
-      <br><br>
+---
 
-      <a href="https://www.linkedin.com/in/andré-forastieri-a029913b1?utm_source=share_via&utm_content=profile&utm_medium=member_android">
-        <img src="./src/img/lkd.png" width="32" alt="LinkedIn">
-      </a>
-      &nbsp;&nbsp;
-      <a href="https://github.com/AndreL050690">
-        <img src="./src/img/github.png" width="32" alt="GitHub">
-      </a>
-    </td>
+### André Luiz Ramos Forastieri
 
-    <td align="center" width="220">
-      <img src="./src/img/fotoMih.png" width="120" alt="Foto de Milena Silva">
-      <br><br>
+<p align="center">
+  <img src="./src/img/fotoAndre.png" width="120" alt="Foto de André Luiz">
+</p>
 
-      <strong>Milena Silva Conegin</strong>
-      <br>
-      RM 568923
-      <br>
-      Desenvolvedora de Componentes
-      <br>
-      Turma: 1TDSPH
-      <br><br>
+**RM:** 572203  
+**Função:** Desenvolvedor de Interface  
+**Turma:** 1TDSPH
 
-      <a href="https://www.linkedin.com/in/milena-conegin-996b22269?utm_source=share_via&utm_content=profile&utm_medium=member_ios">
-        <img src="./src/img/lkd.png" width="32" alt="LinkedIn">
-      </a>
-      &nbsp;&nbsp;
-      <a href="https://github.com/MilenaConegin">
-        <img src="./src/img/github.png" width="32" alt="GitHub">
-      </a>
-    </td>
-  </tr>
+[![LinkedIn](./src/img/lkd.png)](https://www.linkedin.com/in/andré-forastieri-a029913b1/)
+[![GitHub](./src/img/github.png)](https://github.com/AndreL050690)
 
-  <tr>
-    <td align="center" width="220">
-      <img src="./src/img/fotoEduardo.png" width="120" alt="Foto de Eduardo Damasio">
-      <br><br>
+---
 
-      <strong>Eduardo Damasio Guelere</strong>
-      <br>
-      RM 569960
-      <br>
-      Desenvolvedor Visual
-      <br>
-      Turma: 1TDSPH
-      <br><br>
+### Milena Silva Conegin
 
-      <a href="https://www.linkedin.com/in/eduardo-guelere-0902753b8/">
-        <img src="./src/img/lkd.png" width="32" alt="LinkedIn">
-      </a>
-      &nbsp;&nbsp;
-      <a href="https://github.com/Eduardoguelere">
-        <img src="./src/img/github.png" width="32" alt="GitHub">
-      </a>
-    </td>
+<p align="center">
+  <img src="./src/img/fotoMih.png" width="120" alt="Foto de Milena Silva">
+</p>
 
-    <td align="center" width="220">
-      <img src="./src/img/fotoMarina.png" width="120" alt="Foto de Marina Fernandes">
-      <br><br>
+**RM:** 568923  
+**Função:** Desenvolvedora de Componentes  
+**Turma:** 1TDSPH
 
-      <strong>Marina Fernandes Gomes Mesquita</strong>
-      <br>
-      RM 571265
-      <br>
-      Desenvolvedora de Arquitetura
-      <br>
-      Turma: 1TDSPH
-      <br><br>
+[![LinkedIn](./src/img/lkd.png)](https://www.linkedin.com/)
+[![GitHub](./src/img/github.png)](https://github.com/)
 
-      <a href="https://www.linkedin.com/in/marifernandesgm-58460a40a">
-        <img src="./src/img/lkd.png" width="32" alt="LinkedIn">
-      </a>
-      &nbsp;&nbsp;
-      <a href="https://github.com/marifernandesgm">
-        <img src="./src/img/github.png" width="32" alt="GitHub">
-      </a>
-    </td>
+---
 
-    <td></td>
-  </tr>
-</table>
+### Eduardo Damasio Guelere
+
+<p align="center">
+  <img src="./src/img/fotoEduardo.png" width="120" alt="Foto de Eduardo">
+</p>
+
+**RM:** 569960  
+**Função:** Desenvolvedor Visual  
+**Turma:** 1TDSPH
+
+[![LinkedIn](./src/img/lkd.png)](https://www.linkedin.com/in/eduardo-guelere-0902753b8/)
+[![GitHub](./src/img/github.png)](https://github.com/Eduardoguelere)
+
+---
+
+### Marina Fernandes Gomes Mesquita
+
+<p align="center">
+  <img src="./src/img/fotoMarina.png" width="120" alt="Foto de Marina Fernandes">
+</p>
+
+**RM:** 571265  
+**Função:** Desenvolvedora Front-End  
+**Turma:** 1TDSPH
+
+[![LinkedIn](./src/img/lkd.png)](https://www.linkedin.com/)
+[![GitHub](./src/img/github.png)](https://github.com/marifernandesgm)
+
 ---
 
 ## Repositório Oficial
