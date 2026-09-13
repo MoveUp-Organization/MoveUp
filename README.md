@@ -230,82 +230,25 @@ O projeto também possui o componente **Watson Assistant**, integrado à estrutu
 
 ---
 
-## Integrantes & Autores
+## 👥 Integrantes & Autores
 
-Abaixo encontram-se os integrantes responsáveis pelo desenvolvimento do projeto MoveUP.
+Abaixo encontram-se os detalhes dos desenvolvedores responsáveis pela arquitetura e engenharia do OrbitSafe:
 
-### Isabelle Ferreira Neri Feitoza
-
-<p align="center">
-  <img src="./src/img/fotoIsa.png" width="120" alt="Foto de Isabelle Ferreira">
-</p>
-
-**RM:** 573507  
-**Função:** Desenvolvedora Front-End  
-**Turma:** 1TDSPH
-
-[![LinkedIn](./src/img/lkd.png)](https://www.linkedin.com/in/isabelle-ferreira-8844593ab/)
-[![GitHub](./src/img/github.png)](https://github.com/isabelleferreiraa)
-
----
-
-### André Luiz Ramos Forastieri
-
-<p align="center">
-  <img src="./src/img/fotoAndre.png" width="120" alt="Foto de André Luiz">
-</p>
-
-**RM:** 572203  
-**Função:** Desenvolvedor de Interface  
-**Turma:** 1TDSPH
-
-[![LinkedIn](./src/img/lkd.png)](https://www.linkedin.com/in/andré-forastieri-a029913b1/)
-[![GitHub](./src/img/github.png)](https://github.com/AndreL050690)
-
----
-
-### Milena Silva Conegin
-
-<p align="center">
-  <img src="./src/img/fotoMih.png" width="120" alt="Foto de Milena Silva">
-</p>
-
-**RM:** 568923  
-**Função:** Desenvolvedora de Componentes  
-**Turma:** 1TDSPH
-
-[![LinkedIn](./src/img/lkd.png)](https://www.linkedin.com/)
-[![GitHub](./src/img/github.png)](https://github.com/)
-
----
-
-### Eduardo Damasio Guelere
-
-<p align="center">
-  <img src="./src/img/fotoEduardo.png" width="120" alt="Foto de Eduardo">
-</p>
-
-**RM:** 569960  
-**Função:** Desenvolvedor Visual  
-**Turma:** 1TDSPH
-
-[![LinkedIn](./src/img/lkd.png)](https://www.linkedin.com/in/eduardo-guelere-0902753b8/)
-[![GitHub](./src/img/github.png)](https://github.com/Eduardoguelere)
-
----
-
-### Marina Fernandes Gomes Mesquita
-
-<p align="center">
-  <img src="./src/img/fotoMarina.png" width="120" alt="Foto de Marina Fernandes">
-</p>
-
-**RM:** 571265  
-**Função:** Desenvolvedora Front-End  
-**Turma:** 1TDSPH
-
-[![LinkedIn](./src/img/lkd.png)](https://www.linkedin.com/)
-[![GitHub](./src/img/github.png)](https://github.com/marifernandesgm)
+* <img src="assets/integranteIsabelle.png" width="120px" alt="Foto de Isabelle Ferreira"/><br/>
+  Isabelle Ferreira Neri Feitoza — RM 573507 (JavaScript General & UI) - Turma: 1TDSPH
+  * [LinkedIn](https://www.linkedin.com/in/isabelle-ferreira-8844593ab/) | [GitHub](https://github.com/isabelleferreiraa)
+* <img src="assets/integranteAndre.png" width="120px" alt="Foto de André Luiz"/><br/>
+  André Luiz Ramos Forastieri — RM 572203 (Git Architect & Repo Manager) - Turma: 1TDSPH
+  * [LinkedIn](https://www.linkedin.com/in/andré-forastieri-a029913b1?utm_source=share_via&utm_content=profile&utm_medium=member_android) | [GitHub](https://github.com/AndreL050690)
+* <img src="assets/integranteMilena.png" width="120px" alt="Foto de Milena Silva"/><br/>
+  Milena Silva Conegin — RM 568923 (HTML Semantics & UX) - Turma: 1TDSPH
+  * [LinkedIn](https://www.linkedin.com/in/milena-conegin-996b22269?utm_source=share_via&utm_content=profile&utm_medium=member_ios) | [GitHub](https://github.com/MilenaConegin)
+* <img src="assets/integranteEduardo.png" width="120px" alt="Foto de Eduardo Damasio"/><br/>
+  Eduardo Damasio Guelere — RM 569960 (CSS Styling & Design) - Turma: 1TDSPH
+  * [LinkedIn](https://www.linkedin.com/in/eduardo-guelere-0902753b8/) | [GitHub](https://github.com/Eduardoguelere)
+* <img src="assets/integranteMarina.png" width="120px" alt="Foto de Marina Fernandes"/><br/>
+  Marina Fernandes Gomes Mesquita — RM 571265 (Front-End Design & UX) - Turma: 1TDSPH
+  * [LinkedIn](https://www.linkedin.com/in/marifernandesgm-58460a40a) | [GitHub](https://github.com/marifernandesgm)
 
 ---
 
