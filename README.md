@@ -1,11 +1,22 @@
-# MoveUP — Plataforma de Mobilidade Sustentável
+<p align="center">
+  <img src="./src/img/logo.png" width="280" alt="Logo MoveUp">
+</p>
 
-> Challenge — Turma 1TDSPH (2026)
-> Projeto desenvolvido para o Challenge da FIAP em parceria com a SoulUp, utilizando gamificação para incentivar a mobilidade sustentável, a inclusão social e a redução da pegada de carbono.
+<h1 align="center">MoveUp — Plataforma de Mobilidade Sustentável</h1>
+
+<p align="center">
+  Challenge — Turma 1TDSPH (2026)
+</p>
+
+<p align="center">
+  Projeto desenvolvido para o Challenge da FIAP em parceria com a SoulUp,
+  utilizando gamificação para incentivar a mobilidade sustentável,
+  a inclusão social e a redução da pegada de carbono.
+</p>
 
 ---
 
-## 📌 Descrição do Projeto
+## Descrição do Projeto
 
 “A SoulUp é uma plataforma digital inovadora que propõe transformar interações  online em benefícios reais para os usuários e impacto positivo para o planeta. Por meio  de seu aplicativo, os usuários participam de atividades como assistir a conteúdos e  interagir em comunidades, acumulando pontos que podem ser convertidos em  vantagens concretas, como descontos na fatura de energia, selos de impacto  socioambiental e experiências sustentáveis. Dessa forma, a SoulUp conecta pessoas, tecnologia e sustentabilidade, reforçando o propósito da Prospera de gerar valor econômico e ambiental de forma integrada.”
 
@@ -13,9 +24,9 @@ A **MoveUP**, integrada à plataforma SoulUp, tem como objetivo transformar enga
 
 A solução permitirá que usuários convertam pontos acumulados dentro da plataforma em créditos de transporte público, incentivando:
 
-*Redução da emissão de carbono;
-*Uso consciente de mobilidade urbana;
-*Participação ativa em ações sustentáveis;
+* Redução da emissão de carbono;
+* Uso consciente de mobilidade urbana;
+* Participação ativa em ações sustentáveis;
 
 A proposta é estimular os usuários a adotarem alternativas de transporte coletivo e sustentáveis, acumulando **MovePoints** por meio de suas atividades e utilizando esses pontos para obter benefícios dentro da plataforma.
 
@@ -23,7 +34,7 @@ O projeto busca unir **tecnologia, sustentabilidade e mobilidade urbana**, ofere
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 O principal objetivo do MoveUP é **incentivar uma mobilidade urbana mais sustentável**, utilizando elementos de gamificação e conversão de pontos em passagens de transporte público para transformar comportamentos cotidianos em uma experiência de engajamento.
 
@@ -39,27 +50,27 @@ A plataforma busca:
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 O MoveUp foi desenvolvido utilizando uma arquitetura moderna baseada em **React e TypeScript**, com Vite como ferramenta de desenvolvimento e Tailwind CSS para a construção da interface. O `package.json` atual do projeto confirma React, React DOM, React Router DOM, React Hook Form, Tailwind CSS e Vite como parte da stack.
 
-### ⚛️ React
+### React
 
 Biblioteca utilizada para construção da interface da aplicação por meio de componentes reutilizáveis e páginas independentes.
 
-### 🔷 TypeScript
+### TypeScript
 
 Utilizado para adicionar tipagem estática ao projeto, proporcionando maior segurança e organização durante o desenvolvimento.
 
-### ⚡ Vite
+### Vite
 
 Ferramenta utilizada para desenvolvimento e build da aplicação, proporcionando inicialização rápida e Hot Module Replacement (HMR).
 
-### 🎨 Tailwind CSS
+### Tailwind CSS
 
 Utilizado para a estilização das páginas e componentes, permitindo a criação de interfaces responsivas por meio de classes utilitárias.
 
-### 🧭 React Router DOM
+### React Router DOM
 
 Responsável pelo gerenciamento das rotas e navegação entre as páginas da aplicação.
 
@@ -83,15 +94,15 @@ Entre as rotas disponíveis estão:
 
 A configuração atual dessas rotas está centralizada no `main.tsx`.
 
-### 📝 React Hook Form
+### React Hook Form
 
 Utilizado para auxiliar na criação e gerenciamento de formulários da aplicação.
 
-### 💾 Session Storage e Local Storage
+### Session Storage e Local Storage
 
 Utilizados para armazenar informações relacionadas à sessão e dados locais da aplicação.
 
-### 🧹 Oxlint
+### Oxlint
 
 Ferramenta utilizada para análise e padronização do código durante o desenvolvimento.
 
@@ -183,37 +194,37 @@ MOVEUP/
 
 ---
 
-## 🖥️ Principais Funcionalidades
+## Principais Funcionalidades
 
-### 👤 Cadastro e Login
+### Cadastro e Login
 
 Permite que o usuário realize seu cadastro e posteriormente entre na plataforma para acessar suas funcionalidades.
 
-### 🏠 Home
+### Home
 
 Apresenta as principais informações e ações disponíveis para o usuário dentro do MoveUp.
 
-### 🎯 Missões
+### Missões
 
 O usuário pode participar de missões relacionadas à mobilidade sustentável e acumular **MovePoints**.
 
-### 🔄 Conversão de MovePoints
+### Conversão de MovePoints
 
 Área destinada à conversão dos pontos acumulados em benefícios relacionados à mobilidade urbana.
 
-### 💳 Bilhete MoveUp
+### Bilhete MoveUp
 
 O **Meu Cartão** funciona como uma carteira digital, permitindo visualizar informações relacionadas aos benefícios e valores convertidos pelo usuário.
 
-### 📋 Histórico
+### Histórico
 
 Permite consultar movimentações realizadas durante a utilização da plataforma.
 
-### 🎟️ Voucher
+### Voucher
 
 Área destinada à visualização dos benefícios e vouchers obtidos pelo usuário.
 
-### 🤖 Assistente Virtual
+### Assistente Virtual
 
 O projeto também possui o componente **Watson Assistant**, integrado à estrutura principal da aplicação para oferecer suporte e interação com o usuário.
 
@@ -223,32 +234,126 @@ O projeto também possui o componente **Watson Assistant**, integrado à estrutu
 
 Abaixo encontram-se os integrantes responsáveis pelo desenvolvimento do projeto MoveUP:
 
-## 👥 Integrantes & Autores
+<table align="center">
+  <tr>
+    <td align="center" width="220">
+      <img src="./src/img/fotoIsa.png" width="120" alt="Foto de Isabelle Ferreira">
+      <br><br>
 
-Abaixo encontram-se os integrantes responsáveis pelo desenvolvimento do projeto MoveUp:
+      <strong>Isabelle Ferreira Neri Feitoza</strong>
+      <br>
+      RM 573507
+      <br>
+      Desenvolvedora Front-End
+      <br>
+      Turma: 1TDSPH
+      <br><br>
 
-* <img src="src/img/fotoIsa.png" width="120px" alt="Foto de Isabelle Ferreira"/><br/>
-  **Isabelle Ferreira Neri Feitoza** — RM 573507 (Desenvolvedora Front-End) - Turma: 1TDSPH
-  * [LinkedIn](https://www.linkedin.com/in/isabelle-ferreira-8844593ab/) | [GitHub](https://github.com/isabelleferreiraa)
+      <a href="https://www.linkedin.com/in/isabelle-ferreira-8844593ab/">
+        <img src="./src/img/lkd.png" width="32" alt="LinkedIn">
+      </a>
+      &nbsp;&nbsp;
+      <a href="https://github.com/isabelleferreiraa">
+        <img src="./src/img/github.png" width="32" alt="GitHub">
+      </a>
+    </td>
 
-* <img src="src/img/fotoAndre.png" width="120px" alt="Foto de André Luiz"/><br/>
-  **André Luiz Ramos Forastieri** — RM 572203 (Desenvolvedor de Interface) - Turma: 1TDSPH
-  * [LinkedIn](https://www.linkedin.com/in/andré-forastieri-a029913b1?utm_source=share_via&utm_content=profile&utm_medium=member_android) | [GitHub](https://github.com/AndreL050690)
+    <td align="center" width="220">
+      <img src="./src/img/fotoAndre.png" width="120" alt="Foto de André Luiz">
+      <br><br>
 
-* <img src="src/img/fotoMih.png" width="120px" alt="Foto de Milena Silva"/><br/>
-  **Milena Silva Conegin** — RM 568923 (Desenvolvedora de Componentes) - Turma: 1TDSPH
-  * [LinkedIn](https://www.linkedin.com/in/milena-conegin-996b22269?utm_source=share_via&utm_content=profile&utm_medium=member_ios) | [GitHub](https://github.com/MilenaConegin)
+      <strong>André Luiz Ramos Forastieri</strong>
+      <br>
+      RM 572203
+      <br>
+      Desenvolvedor de Interface
+      <br>
+      Turma: 1TDSPH
+      <br><br>
 
-* <img src="src/img/fotoEduardo.png" width="120px" alt="Foto de Eduardo Damasio"/><br/>
-  **Eduardo Damasio Guelere** — RM 569960 (Desenvolvedora Visual) - Turma: 1TDSPH
-  * [LinkedIn](https://www.linkedin.com/in/eduardo-guelere-0902753b8/) | [GitHub](https://github.com/Eduardoguelere)
+      <a href="https://www.linkedin.com/in/andré-forastieri-a029913b1?utm_source=share_via&utm_content=profile&utm_medium=member_android">
+        <img src="./src/img/lkd.png" width="32" alt="LinkedIn">
+      </a>
+      &nbsp;&nbsp;
+      <a href="https://github.com/AndreL050690">
+        <img src="./src/img/github.png" width="32" alt="GitHub">
+      </a>
+    </td>
 
-* <img src="src/img/fotoMarina.png" width="120px" alt="Foto de Marina Fernandes"/><br/>
-  **Marina Fernandes Gomes Mesquita** — RM 571265 (Desenvolvedora de Arquitetura) - Turma: 1TDSPH
-  * [LinkedIn](https://www.linkedin.com/in/marifernandesgm-58460a40a) | [GitHub](https://github.com/marifernandesgm)
+    <td align="center" width="220">
+      <img src="./src/img/fotoMih.png" width="120" alt="Foto de Milena Silva">
+      <br><br>
+
+      <strong>Milena Silva Conegin</strong>
+      <br>
+      RM 568923
+      <br>
+      Desenvolvedora de Componentes
+      <br>
+      Turma: 1TDSPH
+      <br><br>
+
+      <a href="https://www.linkedin.com/in/milena-conegin-996b22269?utm_source=share_via&utm_content=profile&utm_medium=member_ios">
+        <img src="./src/img/lkd.png" width="32" alt="LinkedIn">
+      </a>
+      &nbsp;&nbsp;
+      <a href="https://github.com/MilenaConegin">
+        <img src="./src/img/github.png" width="32" alt="GitHub">
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center" width="220">
+      <img src="./src/img/fotoEduardo.png" width="120" alt="Foto de Eduardo Damasio">
+      <br><br>
+
+      <strong>Eduardo Damasio Guelere</strong>
+      <br>
+      RM 569960
+      <br>
+      Desenvolvedor Visual
+      <br>
+      Turma: 1TDSPH
+      <br><br>
+
+      <a href="https://www.linkedin.com/in/eduardo-guelere-0902753b8/">
+        <img src="./src/img/lkd.png" width="32" alt="LinkedIn">
+      </a>
+      &nbsp;&nbsp;
+      <a href="https://github.com/Eduardoguelere">
+        <img src="./src/img/github.png" width="32" alt="GitHub">
+      </a>
+    </td>
+
+    <td align="center" width="220">
+      <img src="./src/img/fotoMarina.png" width="120" alt="Foto de Marina Fernandes">
+      <br><br>
+
+      <strong>Marina Fernandes Gomes Mesquita</strong>
+      <br>
+      RM 571265
+      <br>
+      Desenvolvedora de Arquitetura
+      <br>
+      Turma: 1TDSPH
+      <br><br>
+
+      <a href="https://www.linkedin.com/in/marifernandesgm-58460a40a">
+        <img src="./src/img/lkd.png" width="32" alt="LinkedIn">
+      </a>
+      &nbsp;&nbsp;
+      <a href="https://github.com/marifernandesgm">
+        <img src="./src/img/github.png" width="32" alt="GitHub">
+      </a>
+    </td>
+
+    <td></td>
+  </tr>
+</table>
 ---
 
-## 🔗 Repositório Oficial
+## Repositório Oficial
 
 👉 **GitHub — MoveUp**
 
@@ -256,7 +361,7 @@ Abaixo encontram-se os integrantes responsáveis pelo desenvolvimento do projeto
 
 ---
 
-## 🛠️ Como Executar Localmente
+## Como Executar Localmente
 
 ### 1. Clone o repositório
 
@@ -296,7 +401,7 @@ O projeto também possui scripts configurados para `lint` e `preview`.
 
 ---
 
-## 📌 Scripts Disponíveis
+## Scripts Disponíveis
 
 | Comando           | Descrição                              |
 | ----------------- | -------------------------------------- |
