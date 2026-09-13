@@ -34,7 +34,6 @@ export default function Inicio() {
         </div>
       </section>
 
-      {/* Cards */}
       <section className="py-16 px-5 sm:px-8 bg-light">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-10">
@@ -69,7 +68,6 @@ export default function Inicio() {
         </div>
       </section>
 
-      {/* Destaque */}
       <section className="py-20 px-5 sm:px-8 bg-white">
         <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="max-w-[650px]">
@@ -109,7 +107,6 @@ export default function Inicio() {
         </div>
       </section>
 
-      {/* Por que escolher a MoveUp */}
       <section className="py-16 px-5 sm:px-8 bg-[linear-gradient(135deg,#eef6ff,#f4edff)]">
         <div className="max-w-[1100px] mx-auto">
           <div className="text-center mb-10">

@@ -4,7 +4,6 @@ export default function Sobre() {
   return (
     <main className="max-w-[1200px] mx-auto px-4 sm:px-8 py-10">
 
-      {/* INTRODUÇÃO */}
       <section className="text-center mb-16 max-w-[900px] mx-auto">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-dark mb-4">
           Sustentabilidade em Movimento
@@ -37,7 +36,6 @@ export default function Sobre() {
         </div>
       </section>
 
-      {/* PROBLEMA */}
       <section className="mb-16">
         <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-md">
           <h3 className="text-2xl sm:text-3xl font-bold text-dark mb-6 text-center">
@@ -68,7 +66,6 @@ export default function Sobre() {
         </div>
       </section>
 
-      {/* O QUE É O PROJETO */}
       <section className="bg-gradient-to-br from-primary to-secondary text-white rounded-3xl p-8 sm:p-12 mb-16 shadow-xl">
         <div className="max-w-[900px] mx-auto">
           <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-center">
@@ -98,7 +95,6 @@ export default function Sobre() {
         </div>
       </section>
 
-      {/* COMO FUNCIONA */}
       <section className="mb-16">
         <h3 className="text-2xl sm:text-3xl font-bold text-dark mb-8 text-center">
           Como funciona?
@@ -133,7 +129,6 @@ export default function Sobre() {
         </div>
       </section>
 
-      {/* CONVERSÃO */}
       <section className="mb-16">
         <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-md">
           <h3 className="text-2xl sm:text-3xl font-bold text-dark mb-6 text-center">
@@ -179,7 +174,6 @@ export default function Sobre() {
         </div>
       </section>
 
-      {/* FORMAS DE UTILIZAÇÃO */}
       <section className="mb-16">
         <h3 className="text-2xl sm:text-3xl font-bold text-dark mb-8 text-center">
           Como o benefício pode ser utilizado?
@@ -208,7 +202,6 @@ export default function Sobre() {
         </div>
       </section>
 
-      {/* IMPACTO AMBIENTAL */}
       <section className="bg-gradient-to-br from-[#2563eb] to-[#6366f1] text-white rounded-3xl p-8 sm:p-12 mb-16 shadow-xl">
         <div className="max-w-[900px] mx-auto text-center">
 
@@ -237,7 +230,6 @@ export default function Sobre() {
         </div>
       </section>
 
-      {/* MISSÕES */}
       <section className="mb-16">
         <h3 className="text-2xl sm:text-3xl font-bold text-dark mb-8 text-center">
           Missões Sustentáveis
@@ -284,33 +276,24 @@ export default function Sobre() {
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
 
         <Card
-
           icone="🌱"
           titulo="Mobilidade Real"
           descricao="Transformamos benefícios digitais em incentivos concretos para o transporte público."
-
         />
 
         <Card
-
           icone="💡"
           titulo="Solução Inteligente"
           descricao="Utilizamos tecnologias modernas para criar uma experiência prática, segura e acessível."
-
         />
 
         <Card
-
           icone="🌍"
           titulo="Consciência Verde"
           descricao="Incentivamos hábitos sustentáveis e a redução da pegada de carbono nas grandes cidades."
-
         />
 
       </section>
-
     </main>
-
   );
-
 }

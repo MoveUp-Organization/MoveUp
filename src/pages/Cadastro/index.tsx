@@ -22,7 +22,6 @@ export default function Cadastro() {
   const senhaAtual = watch('senha');
 
   const onSubmit = (data: CadastroFormData) => {
-    // Salva os dados da conta no navegador
     localStorage.setItem(
       'moveupUsuario',
       JSON.stringify({
@@ -31,8 +30,6 @@ export default function Cadastro() {
         senha: data.senha,
       })
     );
-
-    // Após cadastrar, vai para o login
     navigate('/login');
   };
 
@@ -53,7 +50,6 @@ export default function Cadastro() {
           </p>
         </div>
 
-        {/* Lado Direito — Formulário */}
         <div className="md:w-1/2 p-8 sm:p-12">
           <h1 className="text-3xl font-extrabold text-dark mb-6">
             Criar Conta
@@ -64,7 +60,6 @@ export default function Cadastro() {
             noValidate
             className="space-y-4"
           >
-            {/* Nome */}
             <div>
               <label
                 htmlFor="cadNome"
@@ -102,7 +97,6 @@ export default function Cadastro() {
               )}
             </div>
 
-            {/* Email */}
             <div>
               <label
                 htmlFor="cadEmail"
@@ -136,7 +130,6 @@ export default function Cadastro() {
               )}
             </div>
 
-            {/* Senha */}
             <div>
               <label
                 htmlFor="cadSenha"
@@ -174,7 +167,6 @@ export default function Cadastro() {
               )}
             </div>
 
-            {/* Confirmar Senha */}
             <div>
               <label
                 htmlFor="cadConfirmarSenha"
@@ -206,7 +198,6 @@ export default function Cadastro() {
               )}
             </div>
 
-            {/* Botão Cadastrar */}
             <button
               type="submit"
               disabled={isSubmitting}
@@ -216,7 +207,6 @@ export default function Cadastro() {
             </button>
           </form>
 
-          {/* Login */}
           <p className="text-center text-sm text-gray-400 mt-6">
             Já possui uma conta?{' '}
             <Link

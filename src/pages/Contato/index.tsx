@@ -33,7 +33,7 @@ export default function Contato() {
       <section className="bg-white p-8 sm:p-12 rounded-3xl shadow-xl">
         <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {/* Nome */}
+
             <div>
               <label htmlFor="contatoNome" className="block text-sm font-semibold text-dark mb-2">
                 Nome Completo
@@ -53,7 +53,6 @@ export default function Contato() {
               {errors.nome && <p className="text-danger text-xs mt-1 font-medium">{errors.nome.message}</p>}
             </div>
 
-            {/* Email */}
             <div>
               <label htmlFor="contatoEmail" className="block text-sm font-semibold text-dark mb-2">
                 E-mail
@@ -77,7 +76,6 @@ export default function Contato() {
             </div>
           </div>
 
-          {/* Assunto */}
           <div>
             <label htmlFor="contatoAssunto" className="block text-sm font-semibold text-dark mb-2">
               Assunto
@@ -94,7 +92,6 @@ export default function Contato() {
             {errors.assunto && <p className="text-danger text-xs mt-1 font-medium">{errors.assunto.message}</p>}
           </div>
 
-          {/* Mensagem */}
           <div>
             <label htmlFor="contatoMensagem" className="block text-sm font-semibold text-dark mb-2">
               Mensagem

@@ -37,7 +37,6 @@ export default function Conversao() {
 
     setLoadingId(id);
     
-    // Simula uma chamada de API
     setTimeout(() => {
       setSaldoAtual((prev) => prev - custo);
       setLoadingId(null);

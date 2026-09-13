@@ -152,7 +152,6 @@ export default function Home() {
 
   return (
     <main className="max-w-[1200px] mx-auto px-4 sm:px-8 py-6">
-      {/* BANNER DE BOAS-VINDAS */}
       <section className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-6 sm:p-8 text-white mb-8">
         <h1 className="text-2xl sm:text-3xl font-bold mb-2">
           Olá, {nomeUsuario}!
@@ -164,7 +163,6 @@ export default function Home() {
         </p>
       </section>
 
-      {/* MÉTRICAS */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         {metricas.map((metrica) => (
           <div
@@ -186,9 +184,7 @@ export default function Home() {
         ))}
       </section>
 
-      {/* DESAFIOS E ATIVIDADES */}
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* DESAFIOS DA SEMANA */}
         <div className="bg-white rounded-2xl p-6 shadow-sm">
           <h2 className="text-xl font-bold text-dark mb-5">
             Desafios da Semana 🎯
@@ -204,7 +200,6 @@ export default function Home() {
                     : 'bg-gray-50'
                 }`}
               >
-                {/* ÍCONE */}
                 <div
                   className={`w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 ${
                     missao.concluida
@@ -215,7 +210,6 @@ export default function Home() {
                   {missao.concluida ? '✓' : '⌛'}
                 </div>
 
-                {/* TEXTO */}
                 <div className="flex-1">
                   <h3 className="font-semibold text-dark">
                     {missao.titulo}
@@ -226,7 +220,6 @@ export default function Home() {
                   </p>
                 </div>
 
-                {/* BOTÃO */}
                 {!missao.concluida && (
                   <button
                     onClick={() => concluirMissao(missao.id)}
@@ -247,7 +240,6 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* ATIVIDADES RECENTES */}
         <div className="bg-white rounded-2xl p-6 shadow-sm">
           <h2 className="text-xl font-bold text-dark mb-5">
             Atividades Recentes 🕒
