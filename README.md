@@ -253,7 +253,6 @@ Abaixo encontram-se os integrantes responsáveis pelo desenvolvimento do projeto
 
 * <img src="src/img/fotoMarina.png" width="120px" alt="Foto de Marina Fernandes"/><br/>
   **Marina Fernandes Gomes Mesquita** — RM 571265 (Desenvolvedora de Arquitetura) - Turma: 1TDSPH
-  * [LinkedIn](https://www.linkedin.com/in/marifernandesgm-58460a40a) | [GitHub](https://github.com/marifernandesgm)
 
 ---
 
