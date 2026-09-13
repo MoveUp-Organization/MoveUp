@@ -21,7 +21,6 @@ export default function MeuCartao() {
   });
 
   useEffect(() => {
-    // Pega o nome verdadeiro informado no cadastro
     const cadastroSalvo = localStorage.getItem('moveupUsuario');
 
     if (cadastroSalvo) {
@@ -37,7 +36,6 @@ export default function MeuCartao() {
       }
     }
 
-    // Recupera os dados de saldo
     const saldoSalvo = sessionStorage.getItem('moveup_saldo');
 
     if (saldoSalvo) {
@@ -63,7 +61,6 @@ export default function MeuCartao() {
   return (
     <main className="max-w-[1200px] mx-auto px-4 sm:px-8 py-8">
 
-      {/* VOLTAR */}
       <Link
         to="/conversao"
         className="inline-flex items-center gap-2 mb-6 text-primary font-semibold hover:text-secondary transition-colors cursor-pointer"
@@ -74,7 +71,6 @@ export default function MeuCartao() {
         Voltar
       </Link>
 
-      {/* CABEÇALHO DA PÁGINA */}
       <section className="mb-8">
         <h1 className="text-2xl sm:text-3xl font-extrabold text-dark mb-1">
           Meu Cartão
@@ -85,10 +81,8 @@ export default function MeuCartao() {
         </p>
       </section>
 
-      {/* CONTEÚDO PRINCIPAL */}
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
 
-        {/* BILHETE MOVEUP */}
         <div>
           <h2 className="text-lg font-bold text-dark mb-4">
             Bilhete MoveUp
@@ -96,11 +90,8 @@ export default function MeuCartao() {
 
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary to-secondary p-6 sm:p-8 text-white shadow-xl min-h-[280px]">
 
-            {/* Decorações */}
             <div className="absolute -right-16 -top-16 w-48 h-48 rounded-full bg-white/10" />
             <div className="absolute -right-10 bottom-[-70px] w-56 h-56 rounded-full bg-white/10" />
-
-            {/* Logo / nome */}
             <div className="relative z-10 flex items-center justify-between mb-10">
               <div>
                 <p className="text-sm font-medium text-white/70">
@@ -112,13 +103,11 @@ export default function MeuCartao() {
                 </h3>
               </div>
 
-              {/* Chip */}
               <div className="w-12 h-9 rounded-lg bg-gradient-to-br from-yellow-200 to-yellow-400 flex items-center justify-center shadow-md">
                 <div className="w-7 h-5 border-2 border-yellow-700/40 rounded-md" />
               </div>
             </div>
 
-            {/* Número do cartão */}
             <div className="relative z-10 mb-8">
               <p className="text-xs text-white/60 mb-1">
                 Número do cartão
@@ -129,7 +118,6 @@ export default function MeuCartao() {
               </p>
             </div>
 
-            {/* Usuário */}
             <div className="relative z-10 flex items-end justify-between">
               <div>
                 <p className="text-xs text-white/60 mb-1">
@@ -156,7 +144,6 @@ export default function MeuCartao() {
           </div>
         </div>
 
-        {/* CARTEIRA */}
         <div>
           <h2 className="text-lg font-bold text-dark mb-4">
             Minha carteira
@@ -164,7 +151,6 @@ export default function MeuCartao() {
 
           <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-md min-h-[280px] flex flex-col justify-between">
 
-            {/* Saldo */}
             <div>
               <div className="flex items-center justify-between mb-3">
                 <p className="text-sm text-gray-500">
@@ -221,7 +207,6 @@ export default function MeuCartao() {
               </p>
             </div>
 
-            {/* GreenPoints */}
             <div className="mt-6 p-4 rounded-2xl bg-purple-50 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <span className="flex items-center justify-center w-11 h-11 rounded-xl bg-secondary/10 text-2xl">
@@ -230,7 +215,7 @@ export default function MeuCartao() {
 
                 <div>
                   <p className="text-sm text-gray-500">
-                    GreenPoints disponíveis
+                    MovePoints disponíveis
                   </p>
 
                   <p className="font-bold text-dark">
@@ -244,7 +229,6 @@ export default function MeuCartao() {
         </div>
       </section>
 
-      {/* CONVERTER GREENPOINTS */}
       <section className="mb-8">
         <div className="bg-gradient-to-r from-dark to-[#2a2f7e] rounded-3xl p-6 sm:p-8 shadow-lg flex flex-col sm:flex-row items-center gap-5">
 
@@ -254,7 +238,7 @@ export default function MeuCartao() {
 
           <div className="flex-1 text-center sm:text-left">
             <h2 className="text-lg sm:text-xl font-bold text-white mb-1">
-              Transforme seus GreenPoints em saldo
+              Transforme seus MovePoints em saldo
             </h2>
 
             <p className="text-white/70 text-sm sm:text-base">
@@ -267,7 +251,7 @@ export default function MeuCartao() {
             onClick={() => navigate('/transferir-pontos')}
             className="shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white text-dark font-bold hover:bg-gray-100 transition-colors cursor-pointer"
           >
-            Converter GreenPoints
+            Converter MovePoints
 
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -286,7 +270,6 @@ export default function MeuCartao() {
         </div>
       </section>
 
-      {/* INFORMAÇÕES DO BILHETE */}
       <section>
         <h2 className="text-lg font-bold text-dark mb-4">
           Informações do bilhete

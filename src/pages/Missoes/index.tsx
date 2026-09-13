@@ -92,7 +92,6 @@ export default function Missoes() {
 
   return (
     <main className="max-w-[1200px] mx-auto px-4 sm:px-8 py-10">
-      {/* Hero */}
       <section className="text-center mb-10">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-dark mb-3">
           Missões Disponíveis
@@ -102,7 +101,6 @@ export default function Missoes() {
         </p>
       </section>
 
-      {/* Grid de Missões */}
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {missoes.map((missao) => (
           <article

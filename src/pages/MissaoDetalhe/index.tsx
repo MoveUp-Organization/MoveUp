@@ -107,7 +107,6 @@ export default function MissaoDetalhe() {
 
   return (
     <main className="max-w-[800px] mx-auto px-4 sm:px-8 py-10">
-      {/* Breadcrumb */}
       <nav className="mb-6 text-sm text-gray-400">
         <button
           onClick={() => navigate('/missoes')}
@@ -119,7 +118,6 @@ export default function MissaoDetalhe() {
         <span className="text-dark font-medium">{missao.titulo}</span>
       </nav>
 
-      {/* Conteúdo */}
       <article className="bg-white rounded-2xl p-6 sm:p-10 shadow-lg">
         <div className="flex flex-wrap items-center gap-3 mb-4">
           <span className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-purple-100 text-purple-700">

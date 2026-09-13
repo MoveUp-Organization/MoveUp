@@ -23,7 +23,6 @@ export default function Cabecalho() {
     setMenuAberto(false);
   };
 
-  // Carrega os dados do usuário salvo
   const carregarUsuario = () => {
     const usuarioSalvo = localStorage.getItem('moveupUsuario');
     const estaLogado = localStorage.getItem('moveupLogado');
@@ -39,7 +38,6 @@ export default function Cabecalho() {
     }
   };
 
-  // Carrega o usuário quando o cabeçalho aparece
   useEffect(() => {
     carregarUsuario();
 
@@ -54,7 +52,6 @@ export default function Cabecalho() {
     };
   }, []);
 
-  // Sair da conta
   const fazerLogout = () => {
     localStorage.removeItem('moveupLogado');
 
@@ -76,7 +73,6 @@ export default function Cabecalho() {
     <header className="w-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.08)] sticky top-0 z-50">
       <nav className="max-w-[1200px] mx-auto px-4 sm:px-8 py-2 flex items-center justify-between flex-wrap">
 
-        {/* LOGO */}
         <Link
           to="/inicio"
           onClick={fecharMenu}
@@ -88,7 +84,6 @@ export default function Cabecalho() {
           />
         </Link>
 
-        {/* BOTÃO DO MENU MOBILE */}
         <button
           type="button"
           className="md:hidden flex flex-col gap-[5px] bg-transparent border-none cursor-pointer p-2"
@@ -114,7 +109,6 @@ export default function Cabecalho() {
           />
         </button>
 
-        {/* MENU */}
         <ul
           className={`md:flex md:gap-5 lg:gap-6 md:items-center list-none md:translate-x-12 ${
             menuAberto
@@ -123,7 +117,6 @@ export default function Cabecalho() {
           }`}
         >
 
-          {/* INÍCIO */}
           <li>
             <NavLink
               to="/inicio"
@@ -135,7 +128,6 @@ export default function Cabecalho() {
             </NavLink>
           </li>
 
-          {/* HOME */}
           <li>
             <NavLink
               to="/home"
@@ -146,7 +138,6 @@ export default function Cabecalho() {
             </NavLink>
           </li>
 
-          {/* MISSÕES */}
           <li>
             <NavLink
               to="/missoes"
@@ -157,7 +148,6 @@ export default function Cabecalho() {
             </NavLink>
           </li>
 
-          {/* CONVERSÃO */}
           <li>
             <NavLink
               to="/conversao"
@@ -168,7 +158,6 @@ export default function Cabecalho() {
             </NavLink>
           </li>
 
-          {/* VOUCHER */}
           <li>
             <NavLink
               to="/voucher"
@@ -179,7 +168,6 @@ export default function Cabecalho() {
             </NavLink>
           </li>
 
-          {/* SOBRE */}
           <li>
             <NavLink
               to="/sobre"
@@ -190,7 +178,6 @@ export default function Cabecalho() {
             </NavLink>
           </li>
 
-          {/* INTEGRANTES */}
           <li>
             <NavLink
               to="/integrantes"
@@ -201,7 +188,6 @@ export default function Cabecalho() {
             </NavLink>
           </li>
 
-          {/* FAQ */}
           <li>
             <NavLink
               to="/faq"
@@ -212,7 +198,6 @@ export default function Cabecalho() {
             </NavLink>
           </li>
 
-          {/* CONTATO */}
           <li>
             <NavLink
               to="/contato"
@@ -223,10 +208,8 @@ export default function Cabecalho() {
             </NavLink>
           </li>
 
-          {/* PERFIL */}
           <li className="relative">
 
-            {/* ÍCONE DO PERFIL */}
             <button
               type="button"
               onClick={() => setPerfilAberto((prev) => !prev)}
@@ -245,11 +228,9 @@ export default function Cabecalho() {
               </svg>
             </button>
 
-            {/* CARD DO PERFIL */}
             {perfilAberto && (
               <div className="absolute right-0 mt-3 w-72 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden z-50">
 
-                {/* PARTE SUPERIOR */}
                 <div className="bg-gradient-to-r from-primary to-secondary px-5 py-6 text-center">
 
                   <div className="mx-auto w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md text-secondary">
@@ -269,20 +250,16 @@ export default function Cabecalho() {
 
                 </div>
 
-                {/* INFORMAÇÕES DO PERFIL */}
                 <div className="px-5 py-4 text-center">
 
-                  {/* NOME */}
                   <p className="text-dark font-extrabold text-lg">
                     {usuario?.nome || 'Meu perfil'}
                   </p>
 
-                  {/* EMAIL */}
                   <p className="text-gray-500 text-sm mt-1 break-all">
                     {usuario?.email || 'Conta MoveUp'}
                   </p>
 
-                  {/* BOTÃO SAIR */}
                   <button
                     type="button"
                     onClick={fazerLogout}

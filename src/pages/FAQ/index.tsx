@@ -58,7 +58,6 @@ export default function FAQ() {
         </p>
       </section>
 
-      {/* Search box */}
       <div className="relative mb-10 shadow-sm rounded-xl overflow-hidden">
         <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xl">🔍</span>
         <input
@@ -70,7 +69,6 @@ export default function FAQ() {
         />
       </div>
 
-      {/* Accordion */}
       <div className="space-y-4">
         {filteredFaqs.length === 0 ? (
           <p className="text-center text-gray-500 py-8 bg-white rounded-xl">

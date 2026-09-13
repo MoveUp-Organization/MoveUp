@@ -18,13 +18,6 @@ interface HistoricoItem {
   valorReais: number;
 }
 
-/*
-  REGRA DA MOVEUP
-  5.000 pontos = R$ 45,00
-
-  A regra é usada internamente para calcular
-  quantos pontos correspondem ao valor da passagem.
-*/
 const PONTOS_BASE = 5000;
 const VALOR_BASE = 45;
 
@@ -36,15 +29,6 @@ const pontosParaReais = (pontos: number): number => {
   return (pontos / PONTOS_BASE) * VALOR_BASE;
 };
 
-/*
-  Tarifas reais de São Paulo:
-
-  Ônibus: R$ 5,30
-  Metrô/Trem: R$ 5,40
-  Integrada: R$ 10,70
-
-  Os pontos são calculados pela regra da MoveUP.
-*/
 const opcoesPassagens: Passagem[] = [
   {
     id: 1,
@@ -165,13 +149,9 @@ export default function TransferirPontos() {
         .substring(2, 11),
 
       data: new Date().toLocaleDateString('pt-BR'),
-
       transporte: passagem.titulo,
-
       quantidade: qtd,
-
       pontos: totalCusto,
-
       valorReais: totalEmReais,
     };
 
@@ -213,7 +193,6 @@ export default function TransferirPontos() {
   return (
     <main className="max-w-[1200px] mx-auto px-4 sm:px-8 py-10">
 
-      {/* Botão voltar */}
       <Link
         to="/conversao"
         className="inline-flex items-center gap-2 mb-6 text-primary font-semibold hover:text-secondary transition-colors"
@@ -225,9 +204,7 @@ export default function TransferirPontos() {
         Voltar
       </Link>
 
-      {/* Título */}
       <section className="text-center mb-10">
-
         <h1 className="text-3xl sm:text-4xl font-extrabold text-dark mb-3">
           Transferir pontos
         </h1>
@@ -238,9 +215,7 @@ export default function TransferirPontos() {
 
       </section>
 
-      {/* Saldo */}
       <section className="bg-gradient-to-br from-cyan to-blue-500 text-white p-8 rounded-3xl text-center max-w-[400px] mx-auto mb-12 shadow-lg shadow-cyan/20">
-
         <h2 className="text-white/90 text-lg font-medium mb-2">
           Seus MovePoints
         </h2>
@@ -252,18 +227,14 @@ export default function TransferirPontos() {
             {' '}pts
           </span>
         </p>
-
       </section>
 
-      {/* Cards */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
         {opcoesPassagens.map((passagem) => {
           const qtd = quantidades[passagem.id];
-
           const total =
             qtd * passagem.custoUnitario;
-
           const totalReais =
             qtd * passagem.valorReais;
 
@@ -272,14 +243,11 @@ export default function TransferirPontos() {
               key={passagem.id}
               className="bg-white p-8 rounded-3xl shadow-md text-center flex flex-col justify-between"
             >
-
               <div>
-
                 <h2 className="text-xl font-bold text-dark mb-3">
                   {passagem.titulo}
                 </h2>
 
-                {/* Valor real da passagem */}
                 <p className="text-gray-500 mb-2">
                   Valor da passagem:
                 </p>
@@ -294,7 +262,6 @@ export default function TransferirPontos() {
                   )}
                 </p>
 
-                {/* Pontos correspondentes */}
                 <p className="text-secondary font-bold text-sm mb-6">
                   {passagem.custoUnitario.toLocaleString(
                     'pt-BR'
@@ -302,9 +269,7 @@ export default function TransferirPontos() {
                   pts / viagem
                 </p>
 
-                {/* Quantidade */}
                 <div className="flex flex-col items-center gap-2 mb-6">
-
                   <label
                     htmlFor={`qtd-${passagem.id}`}
                     className="text-sm font-medium text-gray-500"
@@ -329,20 +294,16 @@ export default function TransferirPontos() {
 
                 </div>
 
-                {/* Total de pontos */}
                 <p className="font-bold text-dark mb-2">
                   Total:{' '}
-
                   <span className="text-cyan text-xl">
                     {total.toLocaleString('pt-BR')}
                   </span>{' '}
                   pts
                 </p>
 
-                {/* Total em dinheiro */}
                 <p className="text-gray-500 text-sm mb-6">
                   Total:{' '}
-
                   <span className="font-bold text-cyan">
                     {totalReais.toLocaleString(
                       'pt-BR',

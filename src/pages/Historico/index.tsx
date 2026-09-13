@@ -27,7 +27,6 @@ export default function Historico() {
   return (
     <main className="max-w-[1200px] mx-auto px-4 sm:px-8 py-10">
 
-      {/* Botão voltar */}
       <Link
         to="/conversao"
         className="inline-flex items-center gap-2 mb-6 text-primary font-semibold hover:text-secondary transition-colors"
@@ -39,7 +38,6 @@ export default function Historico() {
         Voltar
       </Link>
 
-      {/* Título */}
       <section className="text-center mb-10">
 
         <h1 className="text-3xl sm:text-4xl font-extrabold text-dark mb-3">
@@ -52,19 +50,14 @@ export default function Historico() {
 
       </section>
 
-      {/* Histórico */}
       <section className="bg-white rounded-3xl p-6 sm:p-10 shadow-md">
-
         <h2 className="text-2xl font-bold text-dark mb-6">
           Histórico de Geração de Vouchers
         </h2>
 
         <div className="overflow-x-auto">
-
           <table className="w-full text-sm text-left">
-
             <thead className="bg-gray-50 text-gray-600 border-b-2 border-gray-100">
-
               <tr>
 
                 <th className="py-4 px-4 font-semibold">
@@ -88,7 +81,6 @@ export default function Historico() {
                 </th>
 
               </tr>
-
             </thead>
 
             <tbody>
@@ -96,25 +88,21 @@ export default function Historico() {
               {historico.length === 0 ? (
 
                 <tr>
-
                   <td
                     colSpan={5}
                     className="py-8 text-center text-gray-400"
                   >
                     Nenhum voucher gerado ainda.
                   </td>
-
                 </tr>
 
               ) : (
 
                 historico.map((item) => (
-
                   <tr
                     key={item.id}
                     className="border-b border-gray-50 bg-[#e6fcf5] transition-colors"
                   >
-
                     <td className="py-4 px-4">
                       {item.data}
                     </td>
@@ -138,17 +126,11 @@ export default function Historico() {
                   </tr>
 
                 ))
-
               )}
-
             </tbody>
-
           </table>
-
         </div>
-
       </section>
-
     </main>
   );
 }

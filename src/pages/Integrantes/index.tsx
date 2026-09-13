@@ -18,7 +18,7 @@ export default function Integrantes() {
       linkedin: 'https://www.linkedin.com/in/andr%C3%A9-ramos-a029913b1/',
     },
     {
-      nome: 'Eduardo Damasio',
+      nome: 'Eduardo Damasio Guelere',
       rm: '569960',
       cargo: 'Desenvolvedor Back-end',
       foto: fotoEduardo,
@@ -26,7 +26,7 @@ export default function Integrantes() {
       linkedin: 'https://www.linkedin.com/in/eduardo-guelere-0902753b8/',
     },
     {
-      nome: 'Isabelle Ferreira',
+      nome: 'Isabelle Ferreira Neri Feitoza',
       rm: '573507',
       cargo: 'Analista de Dados',
       foto: fotoIsa,
@@ -34,7 +34,7 @@ export default function Integrantes() {
       linkedin: 'https://www.linkedin.com/in/isabelle-ferreira-8844593ab',
     },
     {
-      nome: 'Milena Conegin',
+      nome: 'Milena Silva Conegin',
       rm: '568923',
       cargo: 'Desenvolvedora Back-end',
       foto: fotoMih,
@@ -42,7 +42,7 @@ export default function Integrantes() {
       linkedin: 'https://www.linkedin.com/in/milena-conegin-996b22269',
     },
     {
-      nome: 'Marina Fernandes',
+      nome: 'Marina Fernandes Gomes Mesquita',
       rm: '571265',
       cargo: 'Especialista em IA',
       foto: fotoMarina,
@@ -95,7 +95,6 @@ export default function Integrantes() {
 
             <div className="flex gap-3 w-full mt-auto">
 
-              {/* GitHub */}
               <a
                 href={integrante.github}
                 target="_blank"
@@ -110,7 +109,6 @@ export default function Integrantes() {
                 GitHub
               </a>
 
-              {/* LinkedIn */}
               <a
                 href={integrante.linkedin}
                 target="_blank"

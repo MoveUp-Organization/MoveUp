@@ -22,7 +22,6 @@ export default function Conversao() {
   });
 
   useEffect(() => {
-    // Pega o nome verdadeiro informado no cadastro
     const cadastroSalvo = localStorage.getItem('moveupUsuario');
 
     if (cadastroSalvo) {
@@ -38,7 +37,6 @@ export default function Conversao() {
       }
     }
 
-    // Recupera os dados de saldo
     const saldoSalvo = sessionStorage.getItem('moveup_saldo');
 
     if (saldoSalvo) {
@@ -67,7 +65,6 @@ export default function Conversao() {
 
   return (
     <main className="max-w-[1200px] mx-auto px-4 sm:px-8 py-6">
-      {/* Saudação */}
       <section className="mb-6">
         <h1 className="text-2xl sm:text-3xl font-extrabold text-dark mb-1">
           Olá, {dados.nome}!
@@ -78,9 +75,7 @@ export default function Conversao() {
         </p>
       </section>
 
-      {/* Dois blocos principais lado a lado */}
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-        {/* Bloco Saldo */}
         <div className="bg-gradient-to-br from-primary to-secondary rounded-2xl p-6 sm:p-8 text-white shadow-lg relative">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-base font-medium opacity-90">
@@ -146,7 +141,6 @@ export default function Conversao() {
           </Link>
         </div>
 
-        {/* Bloco Indicadores */}
         <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-md">
           <h2 className="text-lg font-bold text-dark mb-5">
             Indicadores
@@ -207,14 +201,12 @@ export default function Conversao() {
         </div>
       </section>
 
-      {/* Ações Rápidas */}
       <section className="mb-8">
         <h2 className="text-lg font-bold text-dark mb-4">
           Ações rápidas
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          {/* Transferir pontos */}
           <Link
             to="/transferir-pontos"
             className="block cursor-pointer hover:-translate-y-1 transition-transform"
@@ -222,11 +214,10 @@ export default function Conversao() {
             <Card
               icone="🔄"
               titulo="Transferir pontos"
-              descricao="Envie MovePoints para outros usuários da plataforma."
+              descricao="Troque os MovePoints por benefícios de passagem."
             />
           </Link>
 
-          {/* Meu cartão */}
           <Link
             to="/meu-cartao"
             className="block cursor-pointer hover:-translate-y-1 transition-transform"
@@ -238,7 +229,6 @@ export default function Conversao() {
             />
           </Link>
 
-          {/* Histórico */}
           <Link
             to="/historico"
             className="block cursor-pointer hover:-translate-y-1 transition-transform"
@@ -252,7 +242,6 @@ export default function Conversao() {
         </div>
       </section>
 
-      {/* Bloco de Destaque */}
       <section className="bg-gradient-to-r from-dark to-[#2a2f7e] rounded-2xl p-6 sm:p-8 flex items-center gap-6 shadow-lg">
         <span className="text-4xl shrink-0">
           🛡️
