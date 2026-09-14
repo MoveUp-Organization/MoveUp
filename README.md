@@ -325,6 +325,17 @@ Para dúvidas, sugestões, identificação de problemas ou contribuições, entr
 
 ---
 
+## 🎥 Link do YouTube
+
+[▶️ Assistir ao vídeo de apresentação do MoveUP](https://www.youtube.com/watch?v=TPeZ0DBWI6s)
+
+---
+
+## 📄 Documentação de Mudanças do Trabalho e suas justificativas
+
+[📄 Acessar a documentação das alterações do Front-end](https://docs.google.com/document/d/17UXcrz_gNkan7kRJqvoINle2HtE4Bol6mUDIgFeFCfA/edit?usp=sharing)
+
+---
 <p align="center">
   <strong>MoveUP</strong><br>
   FIAP Challenge — Turma 1TDSPH - 2026
